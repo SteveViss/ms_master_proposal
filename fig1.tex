@@ -1,0 +1,46 @@
+
+	\begin{figure}[!ht]
+		\begin{center}
+			\tikzstyle{noeud}=[circle,
+			                  thick,
+			                  minimum size = 2cm,
+			                  inner sep =5pt,
+			                  draw=brewcol2,
+			                  fill=brewcol2]
+			\tikzstyle{noeud2}=[circle,
+			                  thick,
+			                  minimum size = 2cm,
+			                  inner sep =5pt,
+			                  draw=brewcol7,
+			                  fill=brewcol7]
+			\tikzstyle{noeud3}=[circle,
+			                  thick,
+			                  minimum size = 2cm,
+			                  inner sep =5pt,
+			                  draw=brewcol9,
+			                  fill=brewcol9]
+
+			\begin{tikzpicture}[->,>=stealth',auto,node distance=5cm]
+			      \node [circle,noeud2] (M) at (0,0) {\color{white}{\textbf{M}}};
+			      \node [circle,noeud]  (C) at (-5,3) {\color{white}{\textbf{C}}};
+			      \node [circle,noeud] (D) at (5,3) {\color{white}{\textbf{D}}};
+			      \node [circle,noeud3] (T) at (0,6) {\color{white}{\textbf{T}}};
+
+					\draw[-latex] (M) to[bend right=5] node[above,sloped] {$\gamma_C \cdot M$} (C);
+					\draw[-latex] (C) to[bend right=5] node[below,sloped] {$\alpha_D \cdot (M+C) \cdot D$} (M);
+
+					\draw[-latex] (D) to[bend right=5] node[above,sloped] {$\alpha_C \cdot (M+D) \cdot C$} (M);
+					\draw[-latex] (M) to[bend right=5] node[below,sloped] {$\gamma_D \cdot M$} (D);
+
+					\draw[-latex] (D) to[bend right=5] node[above,sloped] {$eD$} (T);
+					\draw[-latex] (T) to[bend right=5] node[below,sloped] {$\phi_D-\phi_M$} (D);
+
+					\draw[-latex] (T) to[bend right=5] node[above,sloped] {$\phi_C-\phi_M$} (C);
+					\draw[-latex] (C) to[bend right=5] node[below,sloped] {$eC$} (T);
+
+					\draw[-latex,transform canvas={xshift=0.8ex}] (T) to node[above,sloped,rotate=90,transform canvas={xshift=3ex}] {$\phi_M$} (M);
+					\draw[-latex,transform canvas={xshift=-0.8ex}] (M) to node[above,sloped,rotate=-90,,transform canvas={xshift=-3ex}] {$eM$} (T);
+			\end{tikzpicture}
+	\end{center}
+		\caption{Conceptual transition model between forest stands deciduous ($D$), mixte ($M$) and coniferious ($C$). $T$ corresponds to a transitionnal state where a perturbation are occurred with a frequence of $e$. $\phi$, $\gamma$ and $\alpha$ are referred as the recovery, the colonisation and the succession rates respectively. We defined the recovery rate as $\beta_C \cdot (M+C) \cdot E = \phi_C$ and also $\beta_D \cdot (M+D) \cdot E = \phi_D$, to get finaly $\phi_M = \phi_C \cdot \phi_D$ }
+	\end{figure}

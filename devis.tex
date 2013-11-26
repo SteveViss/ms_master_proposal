@@ -1,0 +1,126 @@
+
+\documentclass[12pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{microtype}
+\usepackage{listings}
+\setlength{\parindent}{0pt}
+\usepackage{fancyvrb}
+\usepackage{enumerate}
+\usepackage{array}
+\usepackage[breaklinks=true,linktocpage,hidelinks]{hyperref}
+\usepackage[letterpaper]{geometry}
+\usepackage{url}
+\usepackage{graphicx}
+\usepackage{fullpage}
+
+\usepackage{pgfplots}
+\usepackage{pgfplotstable}
+\usepackage{tikz}
+
+\usepackage{fancyhdr}
+\usepackage{fancybox}
+\usepackage{multicol}
+\usepackage{xcolor}
+\usepackage{adjustbox}
+
+\pgfplotsset{compat=newest}
+\usetikzlibrary{shapes,backgrounds,arrows}
+\usepgfplotslibrary{external} 
+
+\definecolor{brewcol1}{RGB}{166,206,227}
+\definecolor{brewcol2}{RGB}{31,120,180}
+\definecolor{brewcol3}{RGB}{178,223,138}
+\definecolor{brewcol4}{RGB}{51,160,44}
+\definecolor{brewcol5}{RGB}{251,154,153}
+\definecolor{brewcol6}{RGB}{227,26,28}
+\definecolor{brewcol7}{RGB}{237,179,1}
+\definecolor{brewcol8}{RGB}{202,178,214}
+\definecolor{brewcol9}{RGB}{206,27,1}
+
+\geometry{hmargin=1.87cm, vmargin=1.87cm}
+\bibliographystyle{siam}
+
+\DeclareTextFontCommand{\helvetica}{\fontfamily{phv}\selectfont\small}
+
+
+\begin{document}
+
+\clearpage\thispagestyle{empty}
+\begin{center}
+\textbf{Difficult transition for sugar maple in Boreal forest under climate change? \\
+Impact of plant-soil feedback on Sugar maple migration.}
+\vskip 2em
+Research proposal
+\vskip 1em
+Master in Wildlife management
+\vfill
+By
+\vfill
+Steve Vissault 
+\vfill 
+For
+\vfill
+\textbf{Richard Cloutier}, Pr.\\
+Director of the program committee
+\vskip 2em
+\textbf{Dominique Arsenault}, Pr.\\
+President of the jury
+\vskip 2em
+\textbf{Unknow}, Pr.\\
+External member of the jury
+\vskip 2em
+\textbf{Matt Talluto}, PhD\\
+Research Co-director
+\vskip 2em
+\textbf{Dominique Gravel}, Pr.\\
+Research Director
+\vfill
+\vfill
+Université du Québec à Rimouski\\
+\today
+
+\end{center}
+
+\newpage
+\setcounter{page}{1}
+\textbf{Introduction.} Many ecotone studies and modeling efforts on transition between forest to non-forest ecosystems \cite{Scheffer2012,Scheffer2001,Hirota2011} but little attention has been given to evaluate the transitionnal dynamics of forest-forest ecotone \cite{Goldblum2010,Graignic2013}. Ecotones most present in Quebec consists of a transitionnal area with intermixed fragments of boreal forest and northern temperate forest\cite{Goldblum2010}. 
+
+This area is hypothesized to shift in the coming decades due to the climate change \cite{Scheffer2012}. Indeed, this zone is of particulary concern as it contains species pushed to their physiological limits, generating a zone sensitive to environmental fluctuations such as those from a climatic change \cite{Messaoud2007,Goldblum2010}. The boreal region is warming
+twice as fast as the global average and will inevitably alter interaction and composition in the community \cite{Scheffer2012,Hughes2000}. Hence, we expected  this area is undergoing significant natural pressures (e.g. fire regime) increasing in frequency and severity in the coming decades and inducing profound changes due to climate change. Many species of the boreal-temperate forest ecotone are expected to expand or reduce their distribution \cite{Graignic2013,Goldblum2005,Hughes2000} modifying the composition and the dynamic of this ecotone.  \\
+
+% Review the transitional sentences to the species Sugar maple (central in this topics).
+
+Sugar maple is one of the most representative species of northern temperate forests \cite{Graignic2013,Messaoud2007,Kellman2004}. Currently some patches have been established in the boreal landscape  and in the coming decades this species is expected to continue to extend its range \cite{Graignic2013,Goldblum2005,Woodall2009}. This northward migration will result in increasing the surface of the ecotone between the boreal and temperate forest of Quebec. The expansion of sugar maple distribution could be difficult and explain by the fact than microclimatic conditions found in boreal forests are different from those present in temperate forest. Colder temperatures from shading and excess soil moisture due to snow melt cause litter to be more acidic and fibrous during the spring. Therefore, even if the regional climate conditions are favorable \cite{Kellman2004}, the edaphic conditions found in the boreal forest could affect the establishment of sugar maple \cite{Kellman2004,Moore2008}. In this case, the sugar maple could be unable to migrate in boreal forests as a result of climate change. This hypothesis correspond with the observations of Zhu \emph{et al} (2012) who revealed than only 4.3\% of migrations are consistent with expansion\cite{Zhu2012}.\\
+
+%%%% Voir pour détailler, 
+
+Our hypothesis proposes the presence of alternative stable states in the transition zone between the temperate and boreal forest as a result of the progression difficulty. Under pressure from the same climatic conditions we would expect to find in boreal-temperate forests ecotone, the alternative stable states consisting of forest patches dominated by balsam fir and an another by sugar maple at same environnemental conditions and inside the contraction zone between boreal and temperate forests. \\
+
+\textbf{Objectif.} This thesis aims to determine whether alternative stable states are present in the temperate-boreal forest ecotone and if so, look at the impact of plant-soil and disturbances feedback on the alternatives stables states. 
+
+\input{fig1.tex}
+
+\newpage
+
+\helvetica{
+\colorbox{brewcol1!40}{\parbox{\textwidth}{\textbf{\color{brewcol2}{Definition} of terms}
+\begin{description}
+	\item[\helvetica{Ecotone:}] Livingston (1903) defined an ecotone as a zone of tension between forest ecosystems \cite{Goldblum2010}. 
+	\item[\helvetica{Alternative stable states:}] An alternative stable state is described as contrasting states in which a system may converge under the same external conditions \cite{scheffer2009critical}
+\end{description}}}
+}
+
+%% Introduction
+%%%% First paragraph
+% 1. Some sentences about ecotones 
+% 2. Definition and characteristics b
+% 3. Why understand and predict the boreal-temperate forest ecotone dynamic is an important and main question to Quebec under climate change?
+% - Most important Quebec's ecotone, we expected an expansion of this ecotone
+% -
+
+
+\newpage
+\bibliography{/home/steve/Dropbox/Bibtex/Devis}
+\end{document}
