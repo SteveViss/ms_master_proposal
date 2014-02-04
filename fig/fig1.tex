@@ -1,5 +1,4 @@
 
-	\begin{figure}[!ht]
 \begin{center}
 	
 				\tikzstyle{noeud}=[circle,
@@ -21,30 +20,26 @@
 				                  draw=brewforest3,
 				                  fill=brewforest3]
 	
-				\begin{tikzpicture}[->,>=stealth',auto,scale=0.8]
+				\begin{tikzpicture}[->,>=stealth',auto,scale=0.65]
 				      \node [circle,noeud2] (M) at (0,0) {\textbf{M}};
 				      \node [circle,noeud2]  (C) at (-5,5) {\textbf{C}};
 				      \node [circle,noeud2] (D) at (5,5) {\textbf{D}};
 				      \node [circle,noeud2] (T) at (0,10) {\textbf{T}};
 	
 						\draw[thick,-latex] (M) to[bend right=10] node[above,sloped] {$S_C$} (C);
-						\draw[thick,-latex] (C) to[bend right=10] node[below,sloped] {$\beta_d \cdot (C+M)$} (M);
+						\draw[thick,-latex] (C) to[bend right=10] node[below,sloped] {$\beta_d \cdot (D+M)$} (M);
 	
-						\draw[thick,-latex] (D) to[bend right=10] node[above,sloped] {$\beta_c \cdot (D+M)$} (M);
+						\draw[thick,-latex] (D) to[bend right=10] node[above,sloped] {$\beta_c \cdot (C+M)$} (M);
 						\draw[thick,-latex] (M) to[bend right=10] node[below,sloped] {$S_D$} (D);
 	
 						\draw[thick,-latex] (D) to[bend right=10] node[above,sloped] {$e$} (T);
-						\draw[thick,-latex] (T) to[bend right=10] node[below,sloped] {$P_D$} (D);
+						\draw[thick,-latex] (T) to[bend right=10] node[below,sloped] {$\phi_D$} (D);
 	
-						\draw[thick,-latex] (T) to[bend right=10] node[above,sloped] {$P_C$} (C);
+						\draw[thick,-latex] (T) to[bend right=10] node[above,sloped] {$\phi_C$} (C);
 						\draw[thick,-latex] (C) to[bend right=10] node[below,sloped] {$e$} (T);
 	
-						\draw[thick,-latex,transform canvas={xshift=0.8ex}] (T) to node[above,sloped,rotate=90,transform canvas={xshift=5ex}] {$P_D \cdot P_C$} (M);
+						\draw[thick,-latex,transform canvas={xshift=0.8ex}] (T) to node[above,sloped,rotate=90,transform canvas={xshift=3ex}] {$\phi_M $} (M);
 						\draw[thick,-latex,transform canvas={xshift=-0.8ex}] (M) to node[above,sloped,rotate=-90,transform canvas={xshift=-3ex}] {$e$} (T);
 				\end{tikzpicture}
-	
-			\caption{Conceptual transition model between forest stands deciduous ($D$), mixte ($M$) and coniferious ($C$). $E$ corresponds to a transitionnal state where a perturbation are occurred with a frequence of $e$. Parameters $\beta$ and $S$ are referred as the colonisation and the succession rates respectively. We defined the recovery rates ($P_C$ et $P_D$) as $P_C = \alpha_C \cdot (M+C) \cdot [1- \alpha_D \cdot (D +M)]$ and $P_D = \alpha_D \cdot (D+M) \cdot [1- \alpha_C \cdot (C +M)]$, to finaly get this equation $P_M = P_C \cdot P_D$. The parameter $\alpha$ mean the recovery rate after a patch has been disturbe.}
-
 	\end{center}	
-	\label{Model}
-\end{figure}
+
