@@ -1,7 +1,8 @@
-Role of alternative stable states on the sugar maple transition 
+Role of alternative stable states on sugar maple (*Acer saccharum*) range shift in reaction to climate change. 
 ==================
 
-Master project proposal
+**Master project proposal**
 
-Supervisor: Dominique Gravel
-Co-supervisor: Matt Talluto
+**Author**: Steve Vissault
+**Supervisor**: Dominique Gravel
+**Cosupervisor**: Matt Talluto
