@@ -1,4 +1,7 @@
-ms_master_proposal
+Role of alternative stable states on the sugar maple transition 
 ==================
 
-Master Project Proposal on Alternative stable states
+Master project proposal
+
+Supervisor: Dominique Gravel
+Co-supervisor: Matt Talluto
