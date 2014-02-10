@@ -79,14 +79,14 @@ with this project.
 
 % Comments from Hedvig on theoretical framework section: This first part of the review is nice and well explained, but isn’t the theoretical framework, it’s about the forest… But I think it’s better to describe ASS while you talk about forests, to make it clear. Just change the title to ‘ASS in forests’ or something
 
-\textbf{Alternative stable state in forest ecosystems.}  Many ecotone studies and modeling efforts on
-transition between forest to non-forests (e. g. Boreal - Tundra)
-\cite{Scheffer2012,Scheffer2001,Hirota2011,Messaoud2007} but little attention has been
-given to evaluate the transitional dynamics of forest- forest ecotones
-\cite{Goldblum2010,Graignic2013}. At large scale, transition between  the
-temperate and boreal forests can be approach as a dynamic system where each
-forest biomes is a stable state. The presence of different states at a
-location or a time depends on environmental conditions (e. g. soil,
+\textbf{Alternative stable state in forest ecosystems.}  Many ecotone studies
+and modeling efforts on transition between forest to non-forests (e. g. Boreal
+- Tundra) \cite{Scheffer2012,Scheffer2001,Hirota2011,Messaoud2007} but little
+attention has been given to evaluate the transitional dynamics of forest-
+forest ecotones \cite{Goldblum2010,Graignic2013}. At large scale, transition
+between  the temperate and boreal forests can be approach as a dynamic system
+where each forest biomes is a stable state. The presence of different states
+at a location or a time depends on environmental conditions (e. g. soil,
 temperature) encountered by the system. When small environmental fluctuations
 occur, most dynamical system responds almost linearly with no threshold to
 drastic changes in the state of the ecosystem ( Figure \ref{fig1} .a)
@@ -119,36 +119,40 @@ contrasted states over certain range of environmental conditions
 intermixed of constrasted patches in a ecotone landscape like shown across the
 sub-figure \ref{fig1} .c (upper part). This layout could be easily rattached
 to the hardwood-boreal forest patchiness structure often attribute to
-differences in soils, nutrient status and topographical factors \cite{Society2014}.\\
+differences in soils, nutrient status and topographical factors
+\cite{Society2014}.\\
 
 \textbf{Natural system.} In the boreal-temperate forest ecotone, there is no
 distinct boundary and a broad transition zone exists composed of mixed stands
 of coniferous-deciduous species \cite{Goldblum2010}. Instead a macromosaic
 landscape can be observed with pure stands of deciduous trees on favorable
 sites and pure coniferous stands on less favorable sites \cite{Goldblum2010}.
-This segregated repartition could be explain by the fact than microclimatic
-condition can modulate at large scale, and on long term, establishement of
-those forest communities \cite{DeFrenne2013}. Distribution of deciduous and
-boreal forests within ecotone is not determined only along environnemental
-gradients present on large scales but rather by local variation and conditions
-in substrate, drainage, physical soil properties, and nutrient avaiblity
-\cite{Goldblum2010,Society2014}.  Thus balsam fir (\textit{Abies balsamea}) is
-often related to thick organic horizons and coarse xeric deposits while sugar
-maple is mostly present in opposite edaphic conditions
-\cite{Messaoud2007,Kellman2004,Barras1998}. Moreover, boreal and hardwood
-forests are dominated by trees of distinctive physiognomy which may be
-expected to produce distinctive litter and light micro-environments
-\cite{Barras1998}. Those dominant species might induce conditions that
-differentially facilitate regeneration of the of the community’s species as
-positive feeback which contribute to preserve the community type
-\cite{Barras1998}. Frelich \textit{et al.}(1993) \cite{Society2014}
-hypothesized sugar maple has one of those species.  Knowing this, the alternative
-stable states is a relevant framework to study this ecotone dynamic because
-the soil conditions and role of dominant species in regeneration seems to act
-as main feedbacks on the temperate forest establishment generating a
-patchiness landscape (Figure \ref{fig1}.c, upper panel). Thus, the soil
-condition and the role of dominant species in boreal and temperate forest need
-to be investigate as main drivers in alternative stable states
+This segregated patches distribution could be explain by the fact than
+microclimatic conditions can modulate at large scale, and on long term,
+establishement of those forest community's species \cite{DeFrenne2013}.
+Distribution of deciduous and boreal forests within ecotone is not determined
+only along environnemental gradients present on large scales but rather by
+local variation and conditions in substrate, drainage, physical soil
+properties, and nutrient avaiblity \cite{Goldblum2010,Society2014}.  By
+example, balsam fir (\textit{Abies balsamea}) is often related to thick
+organic horizons and coarse xeric deposits while sugar maple is mostly present
+in opposite edaphic conditions \cite{Messaoud2007,Kellman2004,Barras1998}.
+Moreover, boreal and hardwood forests are dominated by trees of distinctive
+physiognomy which may be expected to produce distinctive litter and light
+micro-environments \cite{Barras1998}. Those dominant species might induce
+conditions that differentially facilitate regeneration of the of the
+community’s species as positive feeback which contribute to preserve the
+community type \cite{Barras1998}. Frelich \textit{et al.}(1993)
+\cite{Society2014} hypothesized sugar maple has one of those species.  Knowing
+this, the alternative stable states is a relevant framework to study this
+ecotone dynamic because the soil conditions and role of dominant species in
+regeneration seems to act as main feedbacks on the temperate forest
+establishment generating a patchiness landscape (Figure \ref{fig1}.c, upper
+panel). In this context, we expected to find patch dominated by boreal species
+and others dominated by temperate species under a certain range of climatic
+conditions. Thus, the soil condition and the role of dominant species in
+boreal and temperate forest need to be investigate as main drivers in
+alternative stable states
 \cite{Kellman2004,Moore2008,DeFrenne2013,Barras1998}.
 
 
@@ -171,12 +175,29 @@ to be investigate as main drivers in alternative stable states
 
 \section{Methods}   
 
+\begin{wrapfigure}{L}{0.45\textwidth}         
+	\input{ fig/fig1.tex}
+	\caption{Conceptual transition model between forest stands deciduous ($D$),
+	mixte ($M$) and coniferous ($C$). $T$ corresponds to a transitionnal state
+	where a perturbation are occurred with a frequence of $e$. Parameters $\beta$
+	and $S$ are referred as the colonisation and the succession rates
+	respectively. We defined the recovery rates ($\phi_c$ et $\phi_d$) as $\phi_c
+	= \alpha_c \cdot (M+C) \cdot [1- \alpha_d \cdot (D +M)]$ and $\phi_D =
+	\alpha_d \cdot (D+M) \cdot [1- \alpha_c \cdot (C +M)]$, to finaly get this
+	equation $\phi_m = \phi_c \cdot \phi_d$. The parameter $\alpha$ mean the
+	recovery rate after a patch has been disturbe.}         
+	\label{Model}
+\end{wrapfigure}
+
+
 Following this review, the first methodology section will describe the general
-model reproducing the boreal-temperate ecotone dynamic. Whereas the transition
-between temperate and boreal forests is influenced by environnemental
-conditions and proportion of coniferious and deciduous available in the
-neighbourhood (\textbf{Source}), two subsections will dedicated respectivly on
-those factors and their parametrization. \\
+model reproducing the boreal-temperate ecotone dynamic. The second part will
+be adressed on data used on the parametrization and calibration of this model.
+Whereas the transition between temperate and boreal forests is influenced by
+environnemental conditions and proportion of coniferious and deciduous
+available in the neighbourhood, the third section section will dedicated on
+those factors and their parametrization. Two last sections will focus on
+simulation and validations techniques used in this project's context.\\
 
 \textbf{Models.} This state and transition model will be based on three
 different forest states: \textbf{(D)} Deciduous and \textbf{(M)} Mixed patches
@@ -207,26 +228,54 @@ sucession rate $S_c$.  We can also summarize the coniferous dynamic by this
 differential equation: $\frac{\delta C}{\delta t} = \phi_C \cdot T + S_c \cdot M
 - \alpha_d \cdot (D+M)\cdot C - e \cdot C$. At this stage of this project, the
 model is spatially implicit and assume that all space is occupied by one state,
-so that the proportions of land cover occupied by all types of patch sum to 1.
-\\
+so that the proportions of land cover occupied by all types of patch sum to 1.\\
 
-\begin{wrapfigure}{L}{0.45\textwidth}         
-	\input{ fig/fig1.tex}
-	\caption{Conceptual transition model between forest stands deciduous ($D$),
-	mixte ($M$) and coniferous ($C$). $T$ corresponds to a transitionnal state
-	where a perturbation are occurred with a frequence of $e$. Parameters $\beta$
-	and $S$ are referred as the colonisation and the succession rates
-	respectively. We defined the recovery rates ($\phi_c$ et $\phi_d$) as $\phi_c
-	= \alpha_c \cdot (M+C) \cdot [1- \alpha_d \cdot (D +M)]$ and $\phi_D =
-	\alpha_d \cdot (D+M) \cdot [1- \alpha_c \cdot (C +M)]$, to finaly get this
-	equation $\phi_m = \phi_c \cdot \phi_d$. The parameter $\alpha$ mean the
-	recovery rate after a patch has been disturbe.}         
-	\label{Model}
-\end{wrapfigure}
+\textbf{Data description.}  The parameterization and validation of this model
+will be conducted on the QUICC-FOR\footnote{Quantifying and mapping impact of
+climate change on the forest productivity in eastern Canada.} database
+containing large permanent (PESP) and temporary (PEST) sample plots surveys
+from United- States and Canada. Those data are providing by several forest
+offices and covering 3 eastern canadian provinces ($\pm16.000$ plots) and 31
+states ($\pm50.000$ plots). Data provides by the temporary sample plot (PEST)
+network will be use to validate the model while data from the permanent sample
+plot (PESP) network will addresses on the model calibration. Surveys started
+since 1970s including until 5 remeasurements varying between 5 and 10 years of
+time step and taken across many forest scales: seedling, tree, sapling and
+stand levels. Stem informations provide individual based measurements like
+diameter at breast height (DBH), species, state of the stem (e. g. alive or
+dead), height, age and canopy position. Seedling and sapling datas collected
+by subsample provide numbers of individuals  by class of DBH and species. The
+stand forest datas include many relevant informations on soil, drainage,
+disturbances, cover type and, age and height of the stand. All plot
+inventories are geo-referenced in terms of latitude and longitude coordinates
+for a specific year. For each plot localisation, some climatic variables are
+include and extract by interpolation from the climatic model ANUSPLIN
+\cite{McKenney2011}. The state and transitionnal model will take into
+consideration essentially rainfall (mm) and average temperatures (degree
+celsius) of the previous 30 years the year of the plot sampling. \textbf{(More
+details on climatic data?)}\\
+
+To focus on boreal and temperate forest dynamic, some filters will be apply on
+this database.  In a first time, on 57 species contained in the current
+database, only species the most representative of those communities will be
+take into account in the model. Coniferious forest stand will be center on spruces,
+larch, grey pine, cedar, balsam fir and hemlock. Deciduous stand will include
+ash, maples, iron wood, beech and lime. Finally, post-disturbance forest stand 
+
+Second filter is adressed to sugar maple who is a central species in this
+project and particulary well adapted to mesic soil, thusplots with  only this
+drainage condition will be considered in this analysis. I will also removed 
+all plots disturbed by human activities (mostly forest harvesting) in order to
+focus on natural disturbances.\\
+
+
+%% Describe au moins la provenance 
+
 
 
 \textbf{Paramerization.} 
 
+As previously in the review, model focuses on most representative species of the boreal and temperate forest. Thus 
 The basal area ($m^2/ha$, BA) will be compute to provide a measure of relative
 growth by species ($i$) present in the plot ($j$) ($BA_{ij}$).
 
@@ -248,29 +297,8 @@ climate change scenario.\\
 % - Spatialement explicit à l'aide de l'automate cellulaire.
 
 
-\textbf{Data description.}  The parameterization and validation of this model
-will be conducted on the QUICC-FOR\footnote{Quantifying and mapping impact of
-climate change on the forest productivity in eastern Canada.} database
-containing large permanent (PESP) and temporary (PEST) sample plots surveys
-from United- States and Canada. Those data are providing by several forest
-offices and covering 3 eastern canadian provinces ($\pm16.000$ plots) and 31
-states ($\pm50.000$ plots). Surveys started since 1970s including until 5
-remeasurements across many forest scales: seedling, tree, sapling and stand
-levels. Stem informations provide individual based measurements like diameter
-at breast height  (DBH), species, state of the stem (e. g. alive or dead),
-height, age and canopy position. Seedling and sapling datas collected by
-subsample provide numbers of individuals  by class of DBH and species. The
-stand forest datas include many relevant informations on soil, drainage,
-disturbances, cover type and, age and height of the stand. All measurements
-($\pm$ 6 million) are geo-referenced in terms of latitude and longitude
-coordinates for a specific year. In order to focus on the sugar maple
-community, some filters will be apply on the database. Sugar maple is one
-species mostly establish on mesic soil condition, thus only plots with this
-drainage condition will be considered in the analyse. I will removed also all
-plots disturbed by human activities (mostly forest harvesting) in order to
-focus on natural forest dynamics.
 
-%%% Climatic data
+
 %%% Data not constant
 
 
