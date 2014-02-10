@@ -29,27 +29,28 @@ favorable \cite{Kellman2004}, the microbiota and microclimatic conditions
 found in the boreal forest could affect the establishment of sugar maple
 \cite{Kellman2004,Moore2008,DeFrenne2013,Barras1998}. In this case, the sugar
 maple could be unable to migrate in boreal forests as a result of negative
-soil feedback. This phenomenon could increase the tension between the boreal
-and temperate forest and generate abrupt changes in the community composition
+local conditions feedbacks. This phenomenon could increase the tension between
+the boreal and temperate forest and generate abrupt changes in the community
+composition and generating a patchy mosaic at landscape scale
 (\textbf{$H_0$}).\\
 
-\textbf{Objectives.} This project aims to develop a state
-and transition model (STM) of the boreal and temperate forests in order to
-investigate shifts in the distribution of sugar maple into the boreal-
-temperate forest dynamical system.To assess this main objective, I will (1)
-create a  model of the transition between the temperate and the boreal forest;
-(2) investigate the spatial structure and presence of alternative stable states in the
-transitional zone; and finally (3) run simulations based on different climate
-change scenarios.  In order to define the context of this study, the first
-section of this project proposal is a review subdivided into two parts. The
-first part presents the theoretical context on alternative stable states and
-abrupt changes in ecosystems functioning. The second part of this review
-focuses on the sugar maple , its community and co-existing species in the
-temperate forest and thus explain why alternative stable states is a relevant
-framework to study the dynamic of the boreal-temperate forests ecotone.  The
-second section of this document describes the model and the methodology
-employed to assess the objectives. To conclude, the last part presents the
-general timeline associated with this project.
+\textbf{Objectives.} This project aims to develop a state and transition model
+(STM) of the boreal and temperate forests in order to investigate shifts in the
+distribution of sugar maple into the boreal-temperate forest dynamical
+system.To assess this main objective, I will (1) create a  model of the
+transition between the temperate and the boreal forest; (2) investigate the
+spatial structure and presence of alternative stable states in the transitional
+zone; and finally (3) run simulations based on different climate change
+scenarios.  In order to define the context of this study, the first section of
+this project proposal is a review subdivided into two parts. The first part
+presents the theoretical context on alternative stable states and abrupt changes
+in ecosystems functioning. The second part of this review focuses on the sugar
+maple , its community and co-existing species in the temperate forest and thus
+explain why alternative stable states is a relevant framework to study the
+dynamic of the boreal-temperate forests ecotone.  The second section of this
+document describes the model and the methodology employed to assess the
+objectives. To conclude, the last part presents the general timeline associated
+with this project.
 
 %%% Question from hedvig: What is the relationship between the temperatre forest and the sugar maple?
 
@@ -78,9 +79,9 @@ general timeline associated with this project.
 
 % Comments from Hedvig on theoretical framework section: This first part of the review is nice and well explained, but isn’t the theoretical framework, it’s about the forest… But I think it’s better to describe ASS while you talk about forests, to make it clear. Just change the title to ‘ASS in forests’ or something
 
-\textbf{Theorerical framework.}  Many ecotone studies and modeling efforts on
+\textbf{Alternative stable state in forest ecosystems.}  Many ecotone studies and modeling efforts on
 transition between forest to non-forests (e. g. Boreal - Tundra)
-\cite{Scheffer2012,Scheffer2001,Hirota2011} but little attention has been
+\cite{Scheffer2012,Scheffer2001,Hirota2011,Messaoud2007} but little attention has been
 given to evaluate the transitional dynamics of forest- forest ecotones
 \cite{Goldblum2010,Graignic2013}. At large scale, transition between  the
 temperate and boreal forests can be approach as a dynamic system where each
@@ -88,54 +89,67 @@ forest biomes is a stable state. The presence of different states at a
 location or a time depends on environmental conditions (e. g. soil,
 temperature) encountered by the system. When small environmental fluctuations
 occur, most dynamical system responds almost linearly with no threshold to
-drastic changes in the state of the ecosystem ( Figure \ref{fig1} .A)
+drastic changes in the state of the ecosystem ( Figure \ref{fig1} .a)
 \cite{Scheffer2001,Scheffer2009}. In this case, only one equilibrium can be
 observed given a specific environmental condition
 \cite{Scheffer2001,Scheffer2009,scheffer2009critical}.  When the soil moisture
 increase slowly, the new condition obtained might cause favorable conditions
-to a new species, but this species establishment doesn't change the entire
-community therefore the ecosystem functionning. Another kind of response
-occurs more frequently in nature.  Natural systems are insensitive to
-environmental conditions over certain ranges but respond strongly when a
-threshold is reached (Figure \ref{fig1} .B) \cite{scheffer2009critical}. For
-example, tree mortality can increase sharply when a toxin is added to the
-environment. \cite{scheffer2009critical}. In this case, the response curve of
-the natural systeme is not linear and lightly folded and a small change can
-drive the sytem to a treshold and lead to major changes. As an example, small
-changes in the initial conditions can transform abruptly the species community
-composition and lead to a strong spatial division as representing in figure
-\ref{fig1} .C (Upper panel). In an other hand, respond curve can be folded
-backwards and the same threshold can conduct the system into catastrophic
-changes (Figure \ref{fig1} .C).  When the system approach a tipping point on
-the folded upper branch, the system cannot pass smootly to the lower branch.
-Small forcing on initial condition of the state $F_1$ transfer immediatly the
-system into a contrasted state $F_2$ (Figure \ref{fig1} .C). This point is
-called \textit{Bifurcation point} and small forcing on those critical states
-can drive the system into backward or forward shifts, increasing catastrophic
-events. In this situation, the system present alternative stable states who
-certain range of environnemental conditions. This range correspond to the
-hysteresis zone and can be seen as an intermixed patches in the forest-forest
-ecotone landscape like shown across the sub-figure \ref{fig1} .C (upper part).
-\\
-
- %% Transition sentence
+to a new species but this species establishment doesn't affect the community,
+thus the ecosystem functionning. Another kind of response occurs more
+frequently in nature.  Natural systems are insensitive to environmental
+conditions over certain ranges but respond strongly when a threshold is
+reached (Figure \ref{fig1} .b) \cite{scheffer2009critical}. Tree mortality can
+increase sharply when a toxin is added to the environment.
+\cite{scheffer2009critical}. In this case, the response curve of the natural
+systeme is not linear but lightly folded and a small change can drive the
+sytem to a treshold and lead to major changes. Small changes in the initial
+conditions can transform abruptly the species community composition and lead
+to a strong spatial division as representing in figure \ref{fig1}.c (Upper
+panel). In an other hand, respond curve can be folded backwards and the same
+threshold can conduct the system into catastrophic changes (Figure \ref{fig1}
+.c).  When the system approach a tipping point on the folded upper branch, the
+system cannot pass smootly to the lower branch. Small forcing on initial
+condition of the state $F_1$ transfer immediatly the system into a contrasted
+state $F_2$ (Figure \ref{fig1} .c). This point is called \textit{Bifurcation
+point} and small forcing on those critical states can drive the system into
+backward or forward shifts, increasing catastrophic events. In this situation,
+the system present alternative stable states who mean the presence of
+contrasted states over certain range of environmental conditions
+\cite{scheffer2009critical}. This range can be spatially structured as an
+intermixed of constrasted patches in a ecotone landscape like shown across the
+sub-figure \ref{fig1} .c (upper part). This layout could be easily rattached
+to the hardwood-boreal forest patchiness structure often attribute to
+differences in soils, nutrient status and topographical factors \cite{Society2014}.\\
 
 \textbf{Natural system.} In the boreal-temperate forest ecotone, there is no
 distinct boundary and a broad transition zone exists composed of mixed stands
-of coniferous-deciduous species \cite{Goldblum2010}. In this ecotone, a macromosaic landscape can be observed with pure stands of deciduous trees on favorable sites and pure coniferous stands on less favorable sites
-\cite{Goldblum2010}. Knowing this, the alternative stable states is a relevant
-framework to study this ecotone dynamic because the soil seems to have a
-negative feedback on the temperate forest establishment. This phenomenon need
-to be investigate has a main attractor in alternative stable states
-\cite{Kellman2004,Moore2008,DeFrenne2013,Barras1998}. 
-
-
-% L'écotone entre la forêt boréal et la forêt tempérée
-% nordique. La répartition des espèces caractéristiques de ces milieux ne sui
-% pas un gradient climatique mais concorde avec un gradient lié à la texture et
-% à la composition du sol. Plusieurs espèces clés représentent fortement les
-% communautés végatles rattachés à ces biomes. Ces espèces germent sur des
-% conditions de sols contrastés contribuant à maintenir la présence
+of coniferous-deciduous species \cite{Goldblum2010}. Instead a macromosaic
+landscape can be observed with pure stands of deciduous trees on favorable
+sites and pure coniferous stands on less favorable sites \cite{Goldblum2010}.
+This segregated repartition could be explain by the fact than microclimatic
+condition can modulate at large scale, and on long term, establishement of
+those forest communities \cite{DeFrenne2013}. Distribution of deciduous and
+boreal forests within ecotone is not determined only along environnemental
+gradients present on large scales but rather by local variation and conditions
+in substrate, drainage, physical soil properties, and nutrient avaiblity
+\cite{Goldblum2010,Society2014}.  Thus balsam fir (\textit{Abies balsamea}) is
+often related to thick organic horizons and coarse xeric deposits while sugar
+maple is mostly present in opposite edaphic conditions
+\cite{Messaoud2007,Kellman2004,Barras1998}. Moreover, boreal and hardwood
+forests are dominated by trees of distinctive physiognomy which may be
+expected to produce distinctive litter and light micro-environments
+\cite{Barras1998}. Those dominant species might induce conditions that
+differentially facilitate regeneration of the of the community’s species as
+positive feeback which contribute to preserve the community type
+\cite{Barras1998}. Frelich \textit{et al.}(1993) \cite{Society2014}
+hypothesized sugar maple has one of those species.  Knowing this, the alternative
+stable states is a relevant framework to study this ecotone dynamic because
+the soil conditions and role of dominant species in regeneration seems to act
+as main feedbacks on the temperate forest establishment generating a
+patchiness landscape (Figure \ref{fig1}.c, upper panel). Thus, the soil
+condition and the role of dominant species in boreal and temperate forest need
+to be investigate as main drivers in alternative stable states
+\cite{Kellman2004,Moore2008,DeFrenne2013,Barras1998}.
 
 
 % We used maple sugar basa areal in function of black
@@ -154,23 +168,15 @@ to be investigate has a main attractor in alternative stable states
 % density function suggest the presence of alternative stabe states  in response
 % of intermediate climatic conditions: one state wherein sugar maple dominates
 % and an another in which sugar maple is absent. \\
+
 \section{Methods}   
 
-%% Transition sentence
-
-\begin{wrapfigure}{L}{0.45\textwidth}         
-	\input{ fig/fig1.tex}
-	\caption{Conceptual transition model between forest stands deciduous ($D$),
-	mixte ($M$) and coniferous ($C$). $T$ corresponds to a transitionnal state
-	where a perturbation are occurred with a frequence of $e$. Parameters $\beta$
-	and $S$ are referred as the colonisation and the succession rates
-	respectively. We defined the recovery rates ($\phi_c$ et $\phi_d$) as $\phi_c
-	= \alpha_c \cdot (M+C) \cdot [1- \alpha_d \cdot (D +M)]$ and $\phi_D =
-	\alpha_d \cdot (D+M) \cdot [1- \alpha_c \cdot (C +M)]$, to finaly get this
-	equation $\phi_m = \phi_c \cdot \phi_d$. The parameter $\alpha$ mean the
-	recovery rate after a patch has been disturbe.}         
-	\label{Model}
-\end{wrapfigure}
+Following this review, the first methodology section will describe the general
+model reproducing the boreal-temperate ecotone dynamic. Whereas the transition
+between temperate and boreal forests is influenced by environnemental
+conditions and proportion of coniferious and deciduous available in the
+neighbourhood (\textbf{Source}), two subsections will dedicated respectivly on
+those factors and their parametrization. \\
 
 \textbf{Models.} This state and transition model will be based on three
 different forest states: \textbf{(D)} Deciduous and \textbf{(M)} Mixed patches
@@ -204,25 +210,34 @@ model is spatially implicit and assume that all space is occupied by one state,
 so that the proportions of land cover occupied by all types of patch sum to 1.
 \\
 
-\textbf{Paramerization.} The parameterization of this model will be conducted
-on the QUICC-FOR database containing large permanent sample plots surveys.
-Those data are provided by several forest offices and cover multiple canadian
-provinces ($\pm16 000$ plots) and states ($\pm50 000$ plots). These
-inventories started since the 1970s and include all stems measurements and
-forest stand informations relative to a specific plot location and year. The
-basal area will be compute to provide a measure of relative growth by species
-present and plots. Each plot will be classified into the four different states
-following their percent of  deciduous and coniferious cover.   
+\begin{wrapfigure}{L}{0.45\textwidth}         
+	\input{ fig/fig1.tex}
+	\caption{Conceptual transition model between forest stands deciduous ($D$),
+	mixte ($M$) and coniferous ($C$). $T$ corresponds to a transitionnal state
+	where a perturbation are occurred with a frequence of $e$. Parameters $\beta$
+	and $S$ are referred as the colonisation and the succession rates
+	respectively. We defined the recovery rates ($\phi_c$ et $\phi_d$) as $\phi_c
+	= \alpha_c \cdot (M+C) \cdot [1- \alpha_d \cdot (D +M)]$ and $\phi_D =
+	\alpha_d \cdot (D+M) \cdot [1- \alpha_c \cdot (C +M)]$, to finaly get this
+	equation $\phi_m = \phi_c \cdot \phi_d$. The parameter $\alpha$ mean the
+	recovery rate after a patch has been disturbe.}         
+	\label{Model}
+\end{wrapfigure}
+
+
+\textbf{Paramerization.} 
+
+The basal area ($m^2/ha$, BA) will be compute to provide a measure of relative
+growth by species ($i$) present in the plot ($j$) ($BA_{ij}$).
+
+Each plot will be classified into the four different states following their percent of deciduous and coniferious cover.  
 
 To include the climate, each model parameters will be calibrate as a
-function of probability based on climatic conditions. Climate is a main driver
-in the distribution of those biomes, but their dynamics are also strongly related
-to their own disturbance regimes (i. e. Fire in boreal forest, frost in
-temperate forest) \cite{Goldblum2010}. % Quelles variables climatique sont intégré ? \\
+function of probability based on climatic conditions. % Quelles variables climatique sont intégré ? \\
 
 \textbf{Simulation.} This model will be incorporated in a spatially explicit cellular automaton or lattice in
 order to evaluate the velocity of the transition into differents patches and differents
-climate change scenario.
+climate change scenario.\\
 
 % - Temps discrets
 % - Cellulaire automate\\
@@ -233,8 +248,35 @@ climate change scenario.
 % - Spatialement explicit à l'aide de l'automate cellulaire.
 
 
+\textbf{Data description.}  The parameterization and validation of this model
+will be conducted on the QUICC-FOR\footnote{Quantifying and mapping impact of
+climate change on the forest productivity in eastern Canada.} database
+containing large permanent (PESP) and temporary (PEST) sample plots surveys
+from United- States and Canada. Those data are providing by several forest
+offices and covering 3 eastern canadian provinces ($\pm16.000$ plots) and 31
+states ($\pm50.000$ plots). Surveys started since 1970s including until 5
+remeasurements across many forest scales: seedling, tree, sapling and stand
+levels. Stem informations provide individual based measurements like diameter
+at breast height  (DBH), species, state of the stem (e. g. alive or dead),
+height, age and canopy position. Seedling and sapling datas collected by
+subsample provide numbers of individuals  by class of DBH and species. The
+stand forest datas include many relevant informations on soil, drainage,
+disturbances, cover type and, age and height of the stand. All measurements
+($\pm$ 6 million) are geo-referenced in terms of latitude and longitude
+coordinates for a specific year. In order to focus on the sugar maple
+community, some filters will be apply on the database. Sugar maple is one
+species mostly establish on mesic soil condition, thus only plots with this
+drainage condition will be considered in the analyse. I will removed also all
+plots disturbed by human activities (mostly forest harvesting) in order to
+focus on natural forest dynamics.
+
+%%% Climatic data
+%%% Data not constant
+
+
+\clearpage
 \newpage
-\bibliography{/home/steve/Dropbox/Bibtex/Devis}
+\bibliography{Devis}
 \end{document}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
