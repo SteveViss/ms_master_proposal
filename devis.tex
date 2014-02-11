@@ -128,31 +128,30 @@ of coniferous-deciduous species \cite{Goldblum2010}. Instead a macromosaic
 landscape can be observed with pure stands of deciduous trees on favorable
 sites and pure coniferous stands on less favorable sites \cite{Goldblum2010}.
 This segregated patches distribution could be explain by the fact than
-microclimatic conditions can modulate at large scale, and on long term,
-establishement of those forest community's species \cite{DeFrenne2013}.
-Distribution of deciduous and boreal forests within ecotone is not determined
-only along environnemental gradients present on large scales but rather by
-local variation and conditions in substrate, drainage, physical soil
-properties, and nutrient avaiblity \cite{Goldblum2010,Society2014}.  By
-example, balsam fir (\textit{Abies balsamea}) is often related to thick
-organic horizons and coarse xeric deposits while sugar maple is mostly present
-in opposite edaphic conditions \cite{Messaoud2007,Kellman2004,Barras1998}.
-Moreover, boreal and hardwood forests are dominated by trees of distinctive
-physiognomy which may be expected to produce distinctive litter and light
-micro-environments \cite{Barras1998}. Those dominant species might induce
-conditions that differentially facilitate regeneration of the of the
-community’s species as positive feeback which contribute to preserve the
-community type \cite{Barras1998}. Frelich \textit{et al.}(1993)
-\cite{Society2014} hypothesized sugar maple has one of those species.  Knowing
-this, the alternative stable states is a relevant framework to study this
-ecotone dynamic because the soil conditions and role of dominant species in
-regeneration seems to act as main feedbacks on the temperate forest
-establishment generating a patchiness landscape (Figure \ref{fig1}.c, upper
-panel). In this context, we expected to find patch dominated by boreal species
-and others dominated by temperate species under a certain range of climatic
-conditions. Thus, the soil condition and the role of dominant species in
-boreal and temperate forest need to be investigate as main drivers in
-alternative stable states
+microclimatic conditions can modulate establishement of those forests
+\cite{DeFrenne2013}. Distribution of deciduous and boreal forests within
+ecotone is not determined only along environnemental gradients present on
+large scales but rather by local variation and conditions in substrate,
+drainage, physical soil properties, and nutrient avaiblity
+\cite{Goldblum2010,Society2014}.  By example, balsam fir (\textit{Abies
+balsamea}) is often related to thick organic horizons and coarse xeric
+deposits while sugar maple is mostly present in opposite edaphic conditions
+\cite{Messaoud2007,Kellman2004,Barras1998}. Moreover, boreal and hardwood
+forests are dominated by trees of distinctive physiognomy which may be
+expected to produce distinctive litter and light micro-environments
+\cite{Barras1998}. Those dominant species might induce conditions that
+differentially facilitate regeneration of the community’s species as positive
+feeback which contribute to preserve the community type \cite{Barras1998}.
+Frelich \textit{et al.}(1993) \cite{Society2014} hypothesized sugar maple has
+one of those species.  Knowing this, the alternative stable states is a
+relevant framework to study this ecotone dynamic because the soil conditions
+and role of dominant species in regeneration seems to act as main feedbacks on
+the temperate forest establishment generating a patchiness landscape (Figure
+\ref{fig1}.c, upper panel). In this context, we expected to find patch
+dominated by boreal species and others dominated by temperate species under a
+certain range of climatic conditions. Thus, the soil condition and the role of
+dominant species in boreal and temperate forest need to be investigate as main
+drivers in alternative stable states
 \cite{Kellman2004,Moore2008,DeFrenne2013,Barras1998}.
 
 
@@ -197,13 +196,13 @@ Whereas the transition between temperate and boreal forests is influenced by
 environnemental conditions and proportion of coniferious and deciduous
 available in the neighbourhood, the third section section will dedicated on
 those factors and their parametrization. Two last sections will focus on
-simulation and validations techniques used in this project's context.\\
+simulation and validation techniques used in this project's context.\\
 
 \textbf{Models.} This state and transition model will be based on three
 different forest states: \textbf{(D)} Deciduous and \textbf{(M)} Mixed patches
 characterizing temperate forests, then \textbf{(C)} Coniferous patch
-representing boreal forests (Figure \ref{Model}). Disturbances regime is a main
-driver in those forest dynamics (e .g. Fire in boreal forest or frost in
+representing boreal forests (Figure \ref{Model}). Disturbances regime is a
+main driver in those forest dynamics (e .g. Fire in boreal forest or frost in
 temperate forest). When gap event occur in deciduous patch, species presents
 will be replaced by shade intolerant species as aspen and white birch, well
 adapted to the new shading condition. Thus post-disturbance patches has been
@@ -213,22 +212,24 @@ take up giving a new state (C, D or M). All states can change to another state
 except the direct transition between a deciduous and coniferous stands which
 doesn't occur in natural systems. Simulations of this model aims to assess the
 transition rate between each state in the overall landscape and identify if
-deciduous and coniferous patches are present as alternative stable states. When
-a coniferous patch $C$ has been disturbed with a rate $e$, this can be recovered
-to another state following $\phi_c$. This term is taking in account a specific
-patch recovery rate ($\alpha_{c}$), the availability of coniferous species
-($M+C$) and the proportion of paths unconverted into a deciduous state ($1-
-\alpha_d \cdot (D +M)$). In making the assumption that perturbation rate is
-similar between states, dynamic of a patch $T$ can be formally describe by these
-differential equations: $\frac{\delta T}{\delta t} = e \cdot (C+M+D) - T \cdot
-(\phi_d + \phi_c + \phi_m)$. If a patch $C$ is undisturbed, deciduous species
-$(D+M)$ can spread over the patch with a colonisation rate $\beta_d$ giving a
-new mixed patch. A mixed stand $M$ might turn into a coniferous stand with a
-sucession rate $S_c$.  We can also summarize the coniferous dynamic by this
-differential equation: $\frac{\delta C}{\delta t} = \phi_C \cdot T + S_c \cdot M
-- \alpha_d \cdot (D+M)\cdot C - e \cdot C$. At this stage of this project, the
-model is spatially implicit and assume that all space is occupied by one state,
-so that the proportions of land cover occupied by all types of patch sum to 1.\\
+deciduous and coniferous patches are present as alternative stable states.
+When a coniferous patch $C$ has been disturbed with a rate $e$, this can be
+recovered to another state following $\phi_c$. This term is taking in account
+a specific patch recovery rate ($\alpha_{c}$), the availability of coniferous
+species ($M+C$) and the proportion of paths unconverted into a deciduous state
+($1- \alpha_d \cdot (D +M)$). In making the assumption that perturbation rate
+is similar between states, dynamic of a patch $T$ can be formally describe by
+these differential equations: $\frac{\delta T}{\delta t} = e \cdot (C+M+D) - T
+\cdot (\phi_d + \phi_c + \phi_m)$. If a patch $C$ is undisturbed, deciduous
+species $(D+M)$ can spread over the patch with a colonisation rate $\beta_d$
+giving a new mixed patch. A mixed stand $M$ might turn into a coniferous stand
+with a sucession rate $S_c$.  We can also summarize the coniferous dynamic by
+this differential equation: $\frac{\delta C}{\delta t} = \phi_C \cdot T + S_c
+\cdot M - \alpha_d \cdot (D+M)\cdot C - e \cdot C$. At this stage of this
+project, the model is spatially implicit and assume that all space is occupied
+by one state, so that the proportions of land cover occupied by all types of
+patch sum to 1. The model will be solved numericaly and discretize (\textbf{Note:} Not
+sure to be enough comfortable to discuss about the last sentence).\\
 
 \textbf{Data description.}  The parameterization and validation of this model
 will be conducted on the QUICC-FOR\footnote{Quantifying and mapping impact of
@@ -236,74 +237,92 @@ climate change on the forest productivity in eastern Canada.} database
 containing large permanent (PESP) and temporary (PEST) sample plots surveys
 from United- States and Canada. Those data are providing by several forest
 offices and covering 3 eastern canadian provinces ($\pm16.000$ plots) and 31
-states ($\pm50.000$ plots). Data provides by the temporary sample plot (PEST)
-network will be use to validate the model while data from the permanent sample
-plot (PESP) network will addresses on the model calibration. Surveys started
-since 1970s including until 5 remeasurements varying between 5 and 10 years of
-time step and taken across many forest scales: seedling, tree, sapling and
-stand levels. Stem informations provide individual based measurements like
-diameter at breast height (DBH), species, state of the stem (e. g. alive or
-dead), height, age and canopy position. Seedling and sapling datas collected
-by subsample provide numbers of individuals  by class of DBH and species. The
-stand forest datas include many relevant informations on soil, drainage,
-disturbances, cover type and, age and height of the stand. All plot
-inventories are geo-referenced in terms of latitude and longitude coordinates
-for a specific year. For each plot localisation, some climatic variables are
-include and extract by interpolation from the climatic model ANUSPLIN
-\cite{McKenney2011}. The state and transitionnal model will take into
-consideration essentially rainfall (mm) and average temperatures (degree
-celsius) of the previous 30 years the year of the plot sampling. \textbf{(More
-details on climatic data?)}\\
+states ($\pm50.000$ plots). Surveys started since 1970s including until 5
+remeasurements varying between 5 and 10 years of time step and taken across
+many forest scales: seedling, tree, sapling and stand levels. Stem
+informations provide individual based measurements like diameter at breast
+height (DBH), species, state of the stem (e. g. alive or dead), height, age
+and canopy position. Seedling and sapling datas collected by subsample provide
+numbers of individuals  by class of DBH and species. The stand forest datas
+include many relevant informations on soil, drainage, disturbances, cover type
+and, age and height of the stand. All plot inventories are geo-referenced in
+terms of latitude and longitude coordinates for a specific year. For each plot
+localisation, some climatic variables are include and extract by interpolation
+from the climatic model ANUSPLIN \cite{McKenney2011}. The state and
+transitionnal model will take into consideration essentially rainfall (mm) and
+average temperatures (\ensuremath{^\circ}C) of the previous 30 years the year of the
+plot sampling. Those variables are used by many authors as external condition
+to detect alternative stable states and are often indicative of the
+distrbution of biomes investigated in this present study
+\cite{Goldblum2010,Hirota2011,Scheffer2012}. \textbf{(More details on climatic
+data?)}\\
 
 To focus on boreal and temperate forest dynamic, some filters will be apply on
 this database.  In a first time, on 57 species contained in the current
-database, only species the most representative of those communities will be
-take into account in the model. Coniferious forest stand will be center on spruces,
-larch, grey pine, cedar, balsam fir and hemlock. Deciduous stand will include
-ash, maples, iron wood, beech and lime. Finally, post-disturbance forest stand 
+database, only 28 species mostly representative of those communities will be
+take into account (more details in the parametrization section).
+Second filter is adressed to sugar maple who is central in this project and
+particulary well adapted to mesic soil, thusplots with  only this drainage
+condition will be considered in this analysis. The last filter aims to remove
+all plots disturbed by human activities (mostly by forest harvesting) in order
+to focus on natural disturbances. \\
 
-Second filter is adressed to sugar maple who is a central species in this
-project and particulary well adapted to mesic soil, thusplots with  only this
-drainage condition will be considered in this analysis. I will also removed 
-all plots disturbed by human activities (mostly forest harvesting) in order to
-focus on natural disturbances.\\
+\textbf{Paramerization.} As previously announced, this model focuses mostly on
+representative species of the boreal and temperate forest. In this context and
+using the PESP network, the basal area ($m^2/ha$, BA) will be compute to
+provide a measure of relative growth by interests species ($i$) present in the
+plot ($j$) ($BA_{ij}$) at each time step (year of measurement). Each species
+is related to a patch $C$, $D$ or $T$ previously described in the model's
+section (Figure \ref{Model}). Coniferious forest stand will be center on
+spruce, larch, grey pine, cedar, balsam fir and hemlock species. Deciduous
+stand will include ash, maples, iron wood, beech and lime. Finally, post-
+disturbance forest will be characterized by birch, red oak, aspen, white and
+red pine, balsam poplar and mountain ash (\textbf{Note:} Need to support
+classification of species in this section with MDS / PCA). Each plot will be
+classified into the four different states model following their percent of
+deciduous and coniferious or transitional species cover. In using the plots
+previously classified and their climatic variables associated (\textbf{Note:}
+Do I add soil variables?), we will be able to use the Breiman and Cutler's
+classification method (randomForest R-package, \cite{Liaw2002a}). This method
+allows to compute the probability of state occurency given the local climatic
+condition encounter by the patch (Or $P_{s}|X_1+X_2+X_i...$ where $s$ is a
+state's model and $X_i$, a climat variable). Probability $P_s$ will be use as
+a proxy of the patch types (e.g. $C$ or $M$) available in the neighborhood and
+present in the colonization's equation (e.g. $\beta_c \cdot (C+M)$). The final
+step is to conduct a multinomial regression (a generalized linear model) in
+order to get the transitional probability between each model's state. We can
+summarize this multinomial regression as follow: $P_{d}|P_{m} \sim (D+M) +
+X_1+X_2+X_i... $ where $(D+M)$ correspond to the availability of patch types
+$C$ and $M$ in the neighborhood (previously presented).\\
+
+%% Random forest (lier les variables climatic et de sol avec la probabilité d'occurence des types de patchs. 
 
 
-%% Describe au moins la provenance 
+\textbf{Simulation.} This model will be incorporated in a spatially explicit
+cellular automaton or lattice in order to evaluate the velocity of the
+transition into differents patches and differents climate change scenario.
+Simulation will be run in order to study states equilibrium of this model and
+allows to investigate some relevant points : (i) the sensitivity of
+the model on initials conditions (e.g state occurencies); (ii) evaluate if the
+landscape is spatially structured (e.g. mosaic structure) around alernatives
+stables states; (iii) impact of climatic conditions on transition rates
+between states (e.g. in increasing sharply temperature in the lattice). \\
 
-
-
-\textbf{Paramerization.} 
-
-As previously in the review, model focuses on most representative species of the boreal and temperate forest. Thus 
-The basal area ($m^2/ha$, BA) will be compute to provide a measure of relative
-growth by species ($i$) present in the plot ($j$) ($BA_{ij}$).
-
-Each plot will be classified into the four different states following their percent of deciduous and coniferious cover.  
-
-To include the climate, each model parameters will be calibrate as a
-function of probability based on climatic conditions. % Quelles variables climatique sont intégré ? \\
-
-\textbf{Simulation.} This model will be incorporated in a spatially explicit cellular automaton or lattice in
-order to evaluate the velocity of the transition into differents patches and differents
-climate change scenario.\\
-
-% - Temps discrets
-% - Cellulaire automate\\
-
+%% Est-ce qu'il démontre des ASS ? Est-ce que le paysage est spatiallement structuré autours des ASS ? Comment les conditions initiales (abondance des patchs) du modèle affectent les deux précédentes questions ? 
+% Comment on run les simulations ? 
+  
 \textbf{Validation.} 
+
+% Need to be discuss
 % - Matrice de confusion sur la classification des patchs (M,D,C,T)
-% - Matrice de confusion (TSS) et AUC sur un jeux de données indépendants 
-% - Spatialement explicit à l'aide de l'automate cellulaire.
+% - Comparer les histogrammes de fréquence pour chacun des états du modèle 
+% avec les histogrammes de fréquence des parcelles temporaires 
 
+\section{General timeline} 
 
-
-
-%%% Data not constant
-
+\textbf{Need to discuss with Matt and Dom}
 
 \clearpage
-\newpage
 \bibliography{Devis}
 \end{document}
 
