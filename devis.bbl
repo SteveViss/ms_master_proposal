@@ -5,6 +5,11 @@
   and segregation of tree species in a hardwood-boreal forest transition
   zone}}, Journal of Biogeography,  (1998), pp.~871--881.
 
+\bibitem{Society2014a}
+{\sc B.~Beisner, D.~Haydon, and K.~Cuddington}, {\em {Alternative stable states
+  in ecology}}, Frontiers in Ecology and the Environment, 1 (2003),
+  pp.~376--382.
+
 \bibitem{DeFrenne2013}
 {\sc P.~{De Frenne}, F.~Rodr\'{\i}guez-S\'{a}nchez, D.~A. Coomes, L.~Baeten,
   G.~Verstraeten, M.~Vellend, M.~Bernhardt-R\"{o}mermann, C.~D. Brown,
@@ -17,15 +22,15 @@
   Proceedings of the National Academy of Sciences of the United States of
   America,  (2013), pp.~1--5.
 
+\bibitem{Fisichelli2013}
+{\sc N.~a. Fisichelli, L.~E. Frelich, and P.~B. Reich}, {\em {Temperate tree
+  expansion into adjacent boreal forest patches facilitated by warmer
+  temperatures}}, Ecography,  (2013), pp.~no--no.
+
 \bibitem{Society2014}
 {\sc L.~Frelich, R.~Calcote, M.~Davis, and J.~Pastor}, {\em {Patch formation
   and maintenance in an old-growth hemlock-hardwood forest}}, Ecology, 74
   (1993), pp.~513--527.
-
-\bibitem{Goldblum2005}
-{\sc D.~Goldblum and L.~Rigg}, {\em {Tree growth response to climate change at
-  the deciduous boreal forest ecotone, Ontario, Canada}}, Canadian Journal of
-  Forest Research, 2718 (2005), pp.~2709--2718.
 
 \bibitem{Goldblum2010}
 {\sc D.~Goldblum and L.~S. Rigg}, {\em {The Deciduous Forest - Boreal Forest
@@ -41,29 +46,53 @@
   Resilience of Tropical Forest and Savanna to Critical Transitions}}, Science,
    (2011), pp.~232--235.
 
+\bibitem{Holling1973}
+{\sc C.~S. Holling}, {\em {Resilience and Stability of Ecological Systems}},
+  Annual Review of Ecology and Systematics, 4 (1973), pp.~1--23.
+
 \bibitem{Hughes2000}
 {\sc L.~Hughes}, {\em {Biological consequences of global warming: is the signal
   already apparent?}}, Trends in Ecology \& Evolution, 15 (2000), pp.~56--61.
+
+\bibitem{Iverson2002}
+{\sc L.~R. Iverson and A.~M. Prasad}, {\em {Potential redistribution of tree
+  species habitat under five climate change scenarios in the eastern US}},
+  Forest Ecology and Management, 155 (2002), pp.~205--222.
 
 \bibitem{Kellman2004}
 {\sc M.~Kellman}, {\em {Sugar maple (Acer saccharum Marsh.) establishment in
   boreal forest: results of a transplantation experiment}}, Journal of
   Biogeography, 31 (2004), pp.~1515--1522.
 
+\bibitem{Lafleur2010}
+{\sc B.~Lafleur, D.~Par\'{e}, A.~D. Munson, and Y.~Bergeron}, {\em {Response of
+  northeastern North American forests to climate change: Will soil conditions
+  constrain tree species migration?}}, Environmental Reviews, 18 (2010),
+  pp.~279--289.
+
 \bibitem{Liaw2002a}
 {\sc A.~Liaw and M.~Wiener}, {\em {Classification and Regression by
   randomForest}}, R News, 2 (2002), pp.~18--22.
 
-\bibitem{McKENNEY2007}
-{\sc D.~W. {Mc Kenney}, J.~H. Pedlar, K.~Lawrence, K.~Campbell, and M.~F.
-  Hutchinson}, {\em {Potential Impacts of Climate Change on the Distribution of
-  North American Trees}}, BioScience, 57 (2007), p.~939.
+\bibitem{May1977}
+{\sc R.~May}, {\em {Thresholds and breakpoints in ecosystems with a
+  multiplicity of stable states}}, Nature,  (1977).
+
+\bibitem{McCarthyNeumann2012}
+{\sc S.~McCarthy-Neumann and I.~Ib\'{a}\~{n}ez}, {\em {Tree range expansion may
+  be enhanced by escape from negative plant-soil feedbacks.}}, Ecology, 93
+  (2012), pp.~2637--49.
 
 \bibitem{McKenney2011}
 {\sc D.~W. McKenney, M.~F. Hutchinson, P.~Papadopol, K.~Lawrence, J.~Pedlar,
   K.~Campbell, E.~Milewska, R.~F. Hopkinson, D.~Price, and T.~Owen}, {\em
   {Customized Spatial Climate Models for North America}}, Bulletin of the
   American Meteorological Society, 92 (2011), pp.~1611--1622.
+
+\bibitem{Sciences2014}
+{\sc D.~W. McKenney, J.~H. Pedlar, K.~Lawrence, and K.~Campbell}, {\em {Beyond
+  traditional hardiness zones: using climate envelopes to map plant range
+  limits}}, BioScience, 57 (2007), pp.~929--937.
 
 \bibitem{Messaoud2007}
 {\sc Y.~Messaoud, Y.~Bergeron, and A.~Leduc}, {\em {Ecological factors
