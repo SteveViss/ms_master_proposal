@@ -10,6 +10,12 @@
   in ecology}}, Frontiers in Ecology and the Environment, 1 (2003),
   pp.~376--382.
 
+\bibitem{Cleavitt2011}
+{\sc N.~L. Cleavitt, T.~J. Fahey, and J.~J. Battles}, {\em {Regeneration
+  ecology of sugar maple (Acer saccharum): seedling survival in relation to
+  nutrition, site factors, and damage by insects and pathogens}}, Canadian
+  Journal of Forest Research, 41 (2011), pp.~235--244.
+
 \bibitem{DeFrenne2013}
 {\sc P.~{De Frenne}, F.~Rodr\'{\i}guez-S\'{a}nchez, D.~A. Coomes, L.~Baeten,
   G.~Verstraeten, M.~Vellend, M.~Bernhardt-R\"{o}mermann, C.~D. Brown,
@@ -21,6 +27,11 @@
   {\em {Microclimate moderates plant responses to macroclimate warming.}},
   Proceedings of the National Academy of Sciences of the United States of
   America,  (2013), pp.~1--5.
+
+\bibitem{Demers1998}
+{\sc J.~Demers, T.~Lee, and J.~Barrett}, {\em {Substrate type and the
+  distribution of sugar maple at its elevational limit in the White Mountains,
+  New Hampshire}}, Canadian journal of forest \ldots, 28 (1998), pp.~494--498.
 
 \bibitem{Fisichelli2013}
 {\sc N.~a. Fisichelli, L.~E. Frelich, and P.~B. Reich}, {\em {Temperate tree
@@ -73,10 +84,6 @@
 \bibitem{Liaw2002a}
 {\sc A.~Liaw and M.~Wiener}, {\em {Classification and Regression by
   randomForest}}, R News, 2 (2002), pp.~18--22.
-
-\bibitem{May1977}
-{\sc R.~May}, {\em {Thresholds and breakpoints in ecosystems with a
-  multiplicity of stable states}}, Nature,  (1977).
 
 \bibitem{McCarthyNeumann2012}
 {\sc S.~McCarthy-Neumann and I.~Ib\'{a}\~{n}ez}, {\em {Tree range expansion may
