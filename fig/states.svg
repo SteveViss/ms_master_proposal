@@ -16,7 +16,7 @@
    width="661.00365"
    height="547.95376"
    xml:space="preserve"
-   sodipodi:docname="states.pdf"><sodipodi:namedview
+   sodipodi:docname="states.svg"><sodipodi:namedview
      pagecolor="#ffffff"
      bordercolor="#666666"
      borderopacity="1"
@@ -92,7 +92,7 @@
        id="guide3172" /></sodipodi:namedview><metadata
      id="metadata8"><rdf:RDF><cc:Work
          rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
-           rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title></dc:title></cc:Work></rdf:RDF></metadata><defs
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title /></cc:Work></rdf:RDF></metadata><defs
      id="defs6"><linearGradient
        id="linearGradient5709"><stop
          style="stop-color:#000000;stop-opacity:1;"
@@ -450,7 +450,7 @@
            y="-391.81702"
            x="46.947113"
            id="tspan3873"
-           sodipodi:role="line">Climatic conditions</tspan></text>
+           sodipodi:role="line">Climate conditions</tspan></text>
 <path
          inkscape:connector-curvature="0"
          id="path14-0"
@@ -665,7 +665,7 @@
          sodipodi:cy="281.46912"
          sodipodi:rx="5.2034807"
          sodipodi:ry="5.2034807"
-         d="m 267.70247,281.46912 a 5.2034807,5.2034807 0 1 1 -10.40696,0 5.2034807,5.2034807 0 1 1 10.40696,0 z"
+         d="m 267.70247,281.46912 c 0,2.8738 -2.32967,5.20348 -5.20348,5.20348 -2.8738,0 -5.20348,-2.32968 -5.20348,-5.20348 0,-2.87381 2.32968,-5.20348 5.20348,-5.20348 2.87381,0 5.20348,2.32967 5.20348,5.20348 z"
          transform="matrix(0.8,0,0,-0.8,-12.509292,732.63)" /><path
          sodipodi:type="arc"
          style="fill:#afe9af;fill-opacity:1;stroke:#000000;stroke-opacity:1"
@@ -674,7 +674,7 @@
          sodipodi:cy="281.46912"
          sodipodi:rx="5.2034807"
          sodipodi:ry="5.2034807"
-         d="m 267.70247,281.46912 a 5.2034807,5.2034807 0 1 1 -10.40696,0 5.2034807,5.2034807 0 1 1 10.40696,0 z"
+         d="m 267.70247,281.46912 c 0,2.8738 -2.32967,5.20348 -5.20348,5.20348 -2.8738,0 -5.20348,-2.32968 -5.20348,-5.20348 0,-2.87381 2.32968,-5.20348 5.20348,-5.20348 2.87381,0 5.20348,2.32967 5.20348,5.20348 z"
          transform="matrix(0.8,0,0,-0.8,91.909763,634.09282)" /><path
          sodipodi:type="arc"
          style="fill:#2ca02c;fill-opacity:1;stroke:#000000;stroke-opacity:1"
@@ -683,7 +683,7 @@
          sodipodi:cy="281.46912"
          sodipodi:rx="5.2034807"
          sodipodi:ry="5.2034807"
-         d="m 267.70247,281.46912 a 5.2034807,5.2034807 0 1 1 -10.40696,0 5.2034807,5.2034807 0 1 1 10.40696,0 z"
+         d="m 267.70247,281.46912 c 0,2.8738 -2.32967,5.20348 -5.20348,5.20348 -2.8738,0 -5.20348,-2.32968 -5.20348,-5.20348 0,-2.87381 2.32968,-5.20348 5.20348,-5.20348 2.87381,0 5.20348,2.32967 5.20348,5.20348 z"
          transform="matrix(0.8,0,0,-0.8,-182.01111,730.15429)" /><path
          sodipodi:type="arc"
          style="fill:#afe9af;fill-opacity:1;stroke:#000000;stroke-opacity:1"
@@ -692,7 +692,7 @@
          sodipodi:cy="281.46912"
          sodipodi:rx="5.2034807"
          sodipodi:ry="5.2034807"
-         d="m 267.70247,281.46912 a 5.2034807,5.2034807 0 1 1 -10.40696,0 5.2034807,5.2034807 0 1 1 10.40696,0 z"
+         d="m 267.70247,281.46912 c 0,2.8738 -2.32967,5.20348 -5.20348,5.20348 -2.8738,0 -5.20348,-2.32968 -5.20348,-5.20348 0,-2.87381 2.32968,-5.20348 5.20348,-5.20348 2.87381,0 5.20348,2.32967 5.20348,5.20348 z"
          transform="matrix(0.8,0,0,-0.8,-54.824762,638.75018)" /><text
          xml:space="preserve"
          style="font-size:14.39999962px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
@@ -765,7 +765,7 @@
            y="5.0819988"
            x="261.57587"
            id="tspan3873-4-6"
-           sodipodi:role="line">Climatic conditions</tspan></text>
+           sodipodi:role="line">Climate conditions</tspan></text>
 <path
          sodipodi:type="arc"
          style="fill:#afe9af;fill-opacity:1;stroke:#000000;stroke-opacity:1"
@@ -774,7 +774,7 @@
          sodipodi:cy="281.46912"
          sodipodi:rx="5.2034807"
          sodipodi:ry="5.2034807"
-         d="m 267.70247,281.46912 a 5.2034807,5.2034807 0 1 1 -10.40696,0 5.2034807,5.2034807 0 1 1 10.40696,0 z"
+         d="m 267.70247,281.46912 c 0,2.8738 -2.32967,5.20348 -5.20348,5.20348 -2.8738,0 -5.20348,-2.32968 -5.20348,-5.20348 0,-2.87381 2.32968,-5.20348 5.20348,-5.20348 2.87381,0 5.20348,2.32967 5.20348,5.20348 z"
          transform="matrix(0.8,0,0,-0.8,-117.90716,683.2337)" /><path
          style="fill:#2ca02c;fill-opacity:1;stroke:none"
          d="m 91.944776,454.24104 0,7.64871 c -2.017422,-0.20721 -3.599743,-1.85126 -3.599743,-3.83591 0,-1.98452 1.582514,-3.60543 3.599743,-3.8128 z"
@@ -799,7 +799,7 @@
            y="-391.96478"
            x="206.48297"
            id="tspan3873-6"
-           sodipodi:role="line">Climatic conditions</tspan></text>
+           sodipodi:role="line">Climate conditions</tspan></text>
 <text
          sodipodi:linespacing="125%"
          id="text3871-4-6"
@@ -812,7 +812,7 @@
            y="-391.96478"
            x="367.85153"
            id="tspan3873-6-8"
-           sodipodi:role="line">Climatic conditions</tspan></text>
+           sodipodi:role="line">Climate conditions</tspan></text>
 <path
          style="fill:none;stroke:#000000;stroke-width:0.62959999;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4.0999999;stroke-opacity:1;stroke-dasharray:1.2592, 1.2592;stroke-dashoffset:0;marker-start:url(#Arrow2Lstart)"
          d="m 91.944776,449.83896 0,-21.32466"

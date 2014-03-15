@@ -1,9 +1,8 @@
 
-\documentclass[11pt]{article}
+\documentclass[12pt]{article}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage{amsmath}
-\usepackage{microtype}
 \usepackage{listings}
 \setlength{\parindent}{0pt}
 \usepackage{fancyvrb}
@@ -29,11 +28,13 @@
 \usepackage{graphicx}
 \usepackage{caption}
 \usepackage{subcaption}
+\usepackage{titlesec}
 \captionsetup{labelfont={bf,small,sf}, textfont={small, sf}}
 
 \pgfplotsset{compat=newest}
 \usetikzlibrary{shapes,backgrounds,arrows}
 \usepgfplotslibrary{external} 
+\titlelabel{\thetitle.\quad}
 
 \definecolor{brewcol1}{RGB}{166,206,227}
 \definecolor{brewcol2}{RGB}{31,120,180}
@@ -53,7 +54,7 @@
 \bibliographystyle{siam}
 
 \DeclareTextFontCommand{\helvetica}{\fontfamily{phv}\selectfont\small}
-
+\titlespacing\section{0pt}{12pt plus 4pt minus 2pt}{0pt plus 2pt minus 2pt}
 
 \begin{document}
 
