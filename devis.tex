@@ -246,54 +246,50 @@ kind of forest canopies: (i) hardwood, (ii) mixedwood and finally (iii)
 softwood \cite{Fisichelli2013}. Each of these stands are represented as a
 state in the STM: \textbf{(D)} Deciduous, \textbf{(M)} Mixed and \textbf{(C)}
 Coniferous (see green circle, figure \ref{Model}). According to Briske\textit{
-et al.} (2008) and the STM context, state mean a plant community phases
+et al.} (2008) and this STM context, state mean a plant community phases
 occurring on similar soils that interact with the environment to produce
 persistent functional and structural attributes. Flows or transition rates
 between states are represented by arrows (figure \ref{Model}). Theses rates
-are climate-depend. Except for the colonisation rate ($\theta$), rates are
-varying with the proportion of coniferious or deciduous available in the
-closest neighbourhood. For instance, the succession rate ($\beta$) of a
-coniferous patch (C) towards a mixed patch (M) depend also of the availability
-in C and M patches in the landscape (figure \ref{Model}). Some disturbances
-might change state proportion in the landscape. Natural disturbances is an
-important driver of forest dynamics at landscape scale (e.g. fire in boreal
-forest or frost in temperate forest). For instance, small fires induce
-deciduous dominance and larger and intense fires favoring boreal communities
-\cite{Bergeron2004}. Anthropic pressure by wood harvest
+are climate-depend. Transitions between all states are possible  except the
+direct transition between a deciduous and coniferous stands, which does not
+occur because it systematically require an intermediate step in state M.
+Except for the colonisation rate ($\theta$), transition rates are varying with
+the proportion of coniferious or deciduous available in the closest
+neighbourhood. For instance, the succession rate ($\beta$) of a coniferous
+patch (C) towards a mixed patch (M) depend also of the availability in C and M
+patches in the landscape (figure \ref{Model}). Some disturbances might change
+state proportion in the landscape. Natural disturbances is an important driver
+of forest dynamics at landscape scale (e.g. fire in boreal forest or large
+windthrow in temperate forest). For instance, small fires induce deciduous
+dominance and larger and intense fires favoring boreal communities
+\cite{Bergeron2004}. Anthropogenic disturbances such as logging can also
+produce major change in the forest composition. Dupuis \textit{et al.} (2011)
+revealed that historical disturbances affected the propensity of taxa to
+expand (maples/aspen) or decline (cedar/spruce) in the northern hardwood range
+limit in eastern Québec \cite{Dupuis2011}. Thus, a state is systematically
+convert into a transitional patch \textbf{(T)} when one of those disturbances
+event occur at rate $\epsilon$ (Figure \ref{Model}). After a perturbation, a
+patch T with can be recovered to state C, M or D following a rate $\phi$. This
+term $\phi$ incorporate a specific patch recovery rate ($\alpha$) and equally
+the availability of coniferous species ($M+C$) and the proportion of patches
+unconverted into a deciduous state ($1- \alpha_d \cdot (D + M)$).
 
-%% anthropogenique disturbance
+The model is spatially implicit and assume that all patch in the matrix
+landscape is occupied by one state, so we assume that the proportions of all
+patches sum to 1.
 
-%MT: If you are targeting a general audience, you will have to explain what you mean by a “gap event”
-%DG: hold on, what type of disturbance are you talking about? At some point you'll have to define the spatial scale of interest for a given patch because the disturbance could either represent major or minor events, but not both. 
-
-In taking in accountForest disturbance regime is embedded within the model accross the transitional patch
-\textbf{(T)} (Figure \ref{Model}).
-
-%DG: badly worded, you mean that the transition state could only occur following a disturbance. but disturbances could also lead to non transitional states. 
-
-Dominance by late-succesional species are responsible for a transition from
-state T to other states (C, D or M). Transitions between all states are
-possible  except the direct transition between a deciduous and coniferous
-stands, which does not occur because it systematically require an intermediate
-step in state M.
-
-
-For exemple, when a coniferous patch $C$ has been disturbed, a rate $e$, this can be
-recovered to another state following $\phi_c$. 
 
 %DG: always mention that the transition from X to Y
 % MT: This wording is very confusing. From the figure, the parameter you mention is the rate of changing from T to C, but that is not what you are saying here. 
 
-This term is taking in account a specific patch recovery rate ($\alpha_{c}$),
-the availability of coniferous species ($M+C$) and the proportion of patches
-unconverted into a deciduous state ($1- \alpha_d \cdot (D +M)$).
+
 
 %DG: last part of the sentence not clear, reword.
 %MT: Also confusing - alpha is not in the figure. Also, why is phi aggregated, when other rates are not? Why use phi when it is really a function of other parameters, and is dynamic. In fact, the terminology is incorrect, since phi is a function, not a parameter - it will change based on the availability of different patch types on the landscape.
 %MT: Previously, you said phi depends on M+C, but here it is D+M. Which is correct?
 
 The dynamics of state $T$ is described by the differential equation:
-$\frac{\delta T}{\delta t} = e \cdot (C+M+D) - T \cdot (\phi_d + \phi_c +
+$\frac{\delta T}{\delta t} = \epsilon \cdot (C+M+D) - T \cdot (\phi_d + \phi_c +
 \phi_m)$. If a patch $C$ is undisturbed, deciduous species $(D+M)$ can spread
 over the patch at a rate $\beta_d$. Mixed stands $M$ turn into coniferous
 stands at a rate $S_c$.  The dynamic of coniferous states is described by the
@@ -302,9 +298,6 @@ M - \alpha_d \cdot (D+M)\cdot C - e \cdot C$.
 
 %MT: I think these equations will need more description, and it will need to be very clear. Also, why only present T and C? Where are the other two?
 
-The model is spatially implicit and assume that all space is occupied by one
-state, so that the proportions of land cover occupied by all types of patch
-sum to 1. 
 
 %MT: I don’t understand this. How is all space occupied by a single space? There must be variance for it to be an interesting mode
 
