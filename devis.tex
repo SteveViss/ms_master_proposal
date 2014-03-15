@@ -58,7 +58,8 @@ two alternative stable states, \textit{i.e.} contrasted states occuring in the
 same climate conditions \cite{scheffer2009critical}. This situation generate a
 tension between the boreal and temperate forest meaning that modification on
 micro conditions (i.e mainly soil conditions) can produce abrupt shift in
-community composition in the boreal-temperate forest ecotone.
+community composition in the boreal-temperate forest ecotone.\\
+
 \textbf{Objectives.} The main objective of this project is to investigate the
 transition between the boreal and temperate forests under different climate
 change scenarios. In this context, we will test two different hypothesis:
@@ -125,7 +126,8 @@ as a continuum of states along the environnemental gradient
 annual precipitation increase slightly in a forest deciduous stand, the new
 local condition gives rise to a new coniferious species establishment. This
 forest stand reaches a new state wherein the species community has been
-smoothly changed. Secondly, such systems are insensitive to small change in
+smoothly changed. %%% exemple
+Secondly, such systems are insensitive to small change in
 environmental conditions over certain ranges but respond strongly when a
 threshold is reached \cite{scheffer2009critical}. For exemple, species
 mortality can increase sharply when a toxin is added to the environment
@@ -209,33 +211,17 @@ alternative stable states
 %MT: Good summary. You might come back to climate change here, as well, to remind the reader that you will also be testing some hypotheses about climate change.
 %DG: not clear what you mean at the previous sentence.
 
-% We used maple sugar basa areal in function of black
-% spruce, white spruce and balsam fir basal area to compute the relative
-% abundance of Sugar maple. Given the above statements, we used mainly two
-% climatic variables (annual mean temperature and annual precipitation) to
-% identify the alternative stable states present in the boreal-temperate
-% ecotone. The relationship was performed on climatic variables and Sugar maple
-% relative abundance using kernel density plot function. We obtained the
-% probability of observed a sample plot as function of Sugar maple relative
-% abundance and mean annual temperature (Figure \ref{fig1}). In both case,
-% alternative stable states are presents whereas the function graphed has a
-% bimodal distribution. At low precipitation or temperature conditions, the
-% probability of observing a parcel sampled without Sugar maple is higher than
-% intermediate climatic conditions where the multimodal distribution appear. The
-% density function suggest the presence of alternative stabe states  in response
-% of intermediate climatic conditions: one state wherein Sugar maple dominates
-% and an another in which Sugar maple is absent. \\
-
 \section{Methods}   
 
 \begin{wrapfigure}{L}{0.45\textwidth}
 	\input{ fig/fig1.tex}
 	\caption{Conceptual representation of the transition model between deciduous ($D$),
 	mixed ($M$) and coniferous ($C$) stands. $T$ corresponds to a post-disturbance forest patch. Perturbations, natural and anthropogenic, occur with a frequence $\epsilon$. Parameters $\theta$ and $\beta$ are rates of colonization and succession,
-	respectively. We define the recovery rates $\phi_c$ , $\phi_d$ as $\phi_c
+	respectively. We define recovery functions $\phi_c$ , $\phi_d$ as $\phi_c
 	= \alpha_c \cdot (M+C) \cdot [1- \alpha_d \cdot (D +M)]$ and $\phi_d =
 	\alpha_d \cdot (D+M) \cdot [1- \alpha_c \cdot (C +M)]$. $\phi_m$ include these both equations giving $\phi_m = \phi_c \cdot \phi_d$. Finally, parameter $\alpha$ represents the climate-dependent recovery rate after a patch has been disturbed.}
 	\label{Model}
+	\vspace{-1em}
 \end{wrapfigure}
 
 
@@ -255,13 +241,13 @@ direct transition between a deciduous and coniferous stands, which does not
 occur because it systematically require an intermediate step in state M.
 Except for the colonisation rate ($\theta$), transition rates are varying with
 the proportion of coniferious or deciduous available in the closest
-neighbourhood. For instance, the succession rate ($\beta$) of a coniferous
-patch (C) towards a mixed patch (M) depend also of the availability in C and M
-patches in the landscape (figure \ref{Model}). Some disturbances might change
-state proportion in the landscape. Natural disturbances is an important driver
-of forest dynamics at landscape scale (e.g. fire in boreal forest or large
-windthrow in temperate forest). For instance, small fires induce deciduous
-dominance and larger and intense fires favoring boreal communities
+neighbourhood. For instance, the succession rate of a coniferous patch
+($\beta_c$) towards a mixed patch (M) depend also of the availability in C and
+M patches in the landscape (figure \ref{Model}). Some disturbances might
+change state proportion in the landscape. Natural disturbances is an important
+driver of forest dynamics at landscape scale (e.g. fire in boreal forest or
+large windthrow in temperate forest). For instance, small fires induce
+deciduous dominance and larger and intense fires favoring boreal communities
 \cite{Bergeron2004}. Anthropogenic disturbances such as logging can also
 produce major change in the forest composition. Dupuis \textit{et al.} (2011)
 revealed that historical disturbances affected the propensity of taxa to
@@ -269,106 +255,75 @@ expand (maples/aspen) or decline (cedar/spruce) in the northern hardwood range
 limit in eastern Québec \cite{Dupuis2011}. Thus, a state is systematically
 convert into a transitional patch \textbf{(T)} when one of those disturbances
 event occur at rate $\epsilon$ (Figure \ref{Model}). After a perturbation, a
-patch T with can be recovered to state C, M or D following a rate $\phi$. This
-term $\phi$ incorporate a specific patch recovery rate ($\alpha$) and equally
-the availability of coniferous species ($M+C$) and the proportion of patches
-unconverted into a deciduous state ($1- \alpha_d \cdot (D + M)$).
+patch T with can be recovered to state C, M or D following a function $\phi$.
+For instance when a patch T is recovered into a patch C, this flow describe by
+the function $\phi_c$ incorporate a specific patch recovery rate ($\alpha_c$),
+also the availability of coniferous $(C + M)$ species and the proportion of
+patches unconverted into a deciduous state, either $1- \alpha_d \cdot (D + M)$
+(see caption, figure \ref{Model}). If this patch $C$ is undisturbed then the
+conferious stand turn into a mixed stands by deciduous colonization with a
+rate $\theta_c$. The dynamics of $T$ over the time is described by this
+differential equation: $\frac{\delta T}{\delta t} = \epsilon \cdot (C+M+D) - T
+\cdot (\phi_d + \phi_c + \phi_m)$. The differential equations illustrating the
+dynamics of the other three states (C,M and D) in the system is relatively
+similar and can be described (with coniferious state as example):
+$\frac{\delta C}{\delta t} = \phi_c \cdot T + \theta_c \cdot M - \alpha_d
+\cdot (D+M)\cdot C - \epsilon \cdot C$. The entire model is spatially implicit
+and assume that each patch is occupied by one state, thus the proportion of
+all states sum to 1 in the entire matrix landscape. The model will be solved
+at equilibrium to understand if alternative stable states are possible and
+under which conditions. \\
 
-The model is spatially implicit and assume that all patch in the matrix
-landscape is occupied by one state, so we assume that the proportions of all
-patches sum to 1.
-
-
-%DG: always mention that the transition from X to Y
-% MT: This wording is very confusing. From the figure, the parameter you mention is the rate of changing from T to C, but that is not what you are saying here. 
-
-
-
-%DG: last part of the sentence not clear, reword.
-%MT: Also confusing - alpha is not in the figure. Also, why is phi aggregated, when other rates are not? Why use phi when it is really a function of other parameters, and is dynamic. In fact, the terminology is incorrect, since phi is a function, not a parameter - it will change based on the availability of different patch types on the landscape.
-%MT: Previously, you said phi depends on M+C, but here it is D+M. Which is correct?
-
-The dynamics of state $T$ is described by the differential equation:
-$\frac{\delta T}{\delta t} = \epsilon \cdot (C+M+D) - T \cdot (\phi_d + \phi_c +
-\phi_m)$. If a patch $C$ is undisturbed, deciduous species $(D+M)$ can spread
-over the patch at a rate $\beta_d$. Mixed stands $M$ turn into coniferous
-stands at a rate $S_c$.  The dynamic of coniferous states is described by the
-differential equation $\frac{\delta C}{\delta t} = \phi_C \cdot T + S_c \cdot
-M - \alpha_d \cdot (D+M)\cdot C - e \cdot C$. 
-
-%MT: I think these equations will need more description, and it will need to be very clear. Also, why only present T and C? Where are the other two?
-
-
-%MT: I don’t understand this. How is all space occupied by a single space? There must be variance for it to be an interesting mode
-
-The model will be solved at equilibrium to understand if alternative
-stable states are possible and under which conditions.\\
-
-%MT: To what end? What is the purpose of this step?. In order to be include in C++
-
-\textbf{Data description.} The parameterization and validation of the model
-will be conducted using the QUICC-FOR\footnote{Quantifying and mapping impact
-of climate change on the forest productivity in eastern Canada.} database
-containing large permanent (PP) and temporary (PT) sample plots from
-United States and Canada. Data are freely provided by partners. They and
-covering 3 eastern Canadian provinces (\textit{ca.} 16,000 plots) and 31 states of
-eastern USA (\textit{ca.} 50,000 plots). Surveys started in the 1970s and includ up to
-5 remeasurements, with the interval between sampling ranging from 5 to 10
-years. Data is recorded for seedlings, trees, saplings and stand level. Stem-
-level information including diameter at breast height (DBH), species, state of
-the stem (e. g. alive or dead), height, age and canopy position. Seedling and
-sapling data provide numbers of individuals by class of DBH and species. The
-stand-level data include many relevant informations about soil deposit,
-drainage, disturbances, cover type and, age and height of the stand. All plot
-inventories are geo-referenced. For each plot location, some climatic
-variables are include and extract by interpolation from the climatic model
-ANUSPLIN \cite{McKenney2011}. We will parameterize the model using annual
-rainfall (mm) and average temperatures (\ensuremath{^\circ}C) of the previous
-30 years the year of the plot sampling. 
-
-%MT: This is an awkward transition into the climate data, and might just warrant a new paragraph. Some earlier hypotheses with respect to climate will also help the reader remember why these data are important
-
-Those variables are used by many
-authors as external conditions to detect alternative stable states and are
-often indicative of the distrbution of biomes investigated in this present
-study \cite{Goldblum2010,Hirota2011,Scheffer2012}. \textbf{(More details on
-climatic data?)}\\
-
-%DG: just list the variables you want to include.
-
-Filters will be applied to the database prior to the model parameterization.
-In a first time, out of the 57 species contained in the  database, only 28
-representative species will be taken into account (more details in the
-parametrization section). Secondly,  only plots with mesic soil conditions, ie
-thick deposite with fast to moderate drainage will be considered for the
-analysis. Lastly, plots disturbed by human activities (mostly by forest
-harvesting) will be removed in order to focus on natural disturbances. \\ 
-
-%DG:there might be one missing: should you only consider the mature stanges (the uneven age stands or the ones with a dominant stratum that is > 50years)
-
+\textbf{Data description.} The parameterization and
+validation of the model will be conducted using the QUICC-
+FOR\footnote{Quantifying and mapping impact of climate change on the forest
+productivity in eastern Canada.} database containing large permanent (PP) and
+temporary (PT) sample plots from United States and Canada. Data are freely
+provided by partners. They and covering 3 eastern Canadian provinces
+(\textit{ca.} 16,000 plots) and 31 states of eastern USA (\textit{ca.} 50,000
+plots). Surveys started in the 1970s and includ up to 5 remeasurements, with
+the interval between sampling ranging from 5 to 10 years. Data is recorded for
+seedlings, trees, saplings and stand level. Stem-level information including
+diameter at breast height (DBH), species, state of the stem (e. g. alive or
+dead), height, age and canopy position. Seedling and sapling data provide
+numbers of individuals by class of DBH and species. The stand-level data
+include many relevant informations about soil deposit, drainage, disturbances,
+cover type and, age and height of the stand. All plot inventories are geo-
+referenced. For each plot location, some climatic variables are include and
+extract by interpolation from the climatic model ANUSPLIN \cite{McKenney2011}.
+We will parameterize the model using annual rainfall (mm) and monthly
+temperatures (minimum, maximum and average in \ensuremath{^\circ}C) of the
+previous 30 years the year of the plot sampling. Those variables are used by
+many authors as external conditions to detect alternative stable states and
+are often indicative of the distribution of biomes investigated in this
+present study \cite{Goldblum2010,Hirota2011,Scheffer2012}. Filters will be
+applied to the database prior to the model parameterization. In a first time,
+out of the 57 species contained in the  database, only 28 representative
+species of the whole sample plots network will be taken into account. Only
+plots with mesic soil conditions, \textit{i.e.} thick deposite with fast to
+moderate drainage will be considered for the analysis. We will consider only
+the mature stands with dominant stratum within trees is superior to 50 years
+old. Lastly, plots disturbed by human activities (mostly by logging) will be
+removed in order to focus on natural disturbances. \\
 
 \textbf{Paramerization.} As previously stated, the model focuses mostly on
-representative species of the boreal and temperate forest. In this context, the basal area ($m^2/ha$, BA) will be compute to
-provide a measure of relative species abundance in each of the
-plot and at each time step (year of measurement). Stands will be considered in one of the four states 
-previously described in the model's
-section (C, D, M or T - Figure \ref{Model}).
+representative species of the boreal and temperate forest. In this context,
+the basal area ($m^2/ha$, BA) will be compute to provide a measure of relative
+species abundance in each of the plot and at each time step (year of
+measurement). Stands will be considered in one of the four states  previously
+described in the model's section (C, D, M or T - Figure \ref{Model}).
 
 % DG: I think here it is critical to provide the boundary conditions to define the states
 
- Coniferious stands are dominated by either spruce, larch, grey pine, cedar,
+Coniferious stands are dominated by either spruce, larch, grey pine, cedar,
 balsam fir and hemlock species. Deciduous stands are dominated by ash, maples,
-iron wood, beech and lime.
-
-% DG: I don't think that lime, neither citrus or oranges are growing here... ;o)
-
-Finally, post- disturbance stands are dominated by birch, red oak, aspen,
-white and red pine, balsam poplar and mountain ash. Each plot will be
-classified into the four different states model following their percent of
-deciduous and coniferious or transitional species cover. In using the plots
-previously classified and their climatic variables associated, we will be able
-to use the Breiman and Cutler's classification method (randomForest R-package,
-\cite{Liaw2002a}).
+iron wood, beech and tilia. Finally, post-disturbance stands are dominated by
+birch, red oak, aspen, white and red pine, balsam poplar and mountain ash.
+Each plot will be classified into the four different states model following
+their percent of deciduous and coniferious or transitional species cover. In
+using the plots previously classified and their climatic variables associated,
+we will be able to use the Breiman and Cutler's classification method
+(randomForest R-package, \cite{Liaw2002a}).
 
 %DG: I think you have to start to lay out the different statistical models you want to parameterize:
 % For instance, P(D_{t1}|M_{t0}, Climate) = f(Climate, \hat{D}, \hat{M})
@@ -388,7 +343,6 @@ $P_{d}|P_{m} \sim (D+M) + X_1+X_2+X_i... $ where $(D+M)$ correspond to the
 availability of patch types $C$ and $M$ in the neighborhood (previously
 presented).\\
 
-%% Random forest (lier les variables climatic et de sol avec la probabilité d'occurence des types de patchs. 
 
 %DG: This is the most important part, and the least developped. 
 %DG: Mention the model will be implemented on C++ or CUDA
@@ -398,10 +352,13 @@ presented).\\
 
 \textbf{Validation.} 
 
-% Need to be discuss
-% - Matrice de confusion sur la classification des patchs (M,D,C,T)
-% - Comparer les histogrammes de fréquence pour chacun des états du modèle 
-% avec les histogrammes de fréquence des parcelles temporaires 
+% - you will use the TSP to validate the model (which means Quebec only)
+% - you categorize each plot into the different state
+% - you will compute the proportion of each state in ecoregions (a climatic division of the territory made by the MRNF)
+% - then you solve the model at equilibrium for each ecoregion
+% - you compare the expected proportion of each state to the observation
+% - a good model will have a high R2 and no bias (slope = 1, intercept = 0)
+% - a bias might be indicative of a change that is already taking place (the current forest composition is not at equilibrium). 
 
 \textbf{Simulation.} This model will be implemented as a spatially explicit
 cellular automaton in order to evaluate the velocity of the
@@ -413,46 +370,13 @@ landscape is spatially structured (e.g. mosaic structure) around alernatives
 stables states; (iii) impact of climatic conditions on transition rates
 between states (e.g. in increasing sharply temperature in the lattice). \\
 
-%DG: as said earlier, validation should come before.
-%DG: things to include in this section:
-% - you will use the TSP to validate the model (which means Quebec only)
-% - you categorize each plot into the different state
-% - you will compute the proportion of each state in ecoregions (a climatic division of the territory made by the MRNF)
-% - then you solve the model at equilibrium for each ecoregion
-% - you compare the expected proportion of each state to the observation
-% - a good model will have a high R2 and no bias (slope = 1, intercept = 0)
-% - a bias might be indicative of a change that is already taking place (the current forest composition is not at equilibrium). 
 
+%%%% Model section
+%MT: To what end? What is the purpose of this step?. In order to be include in C++
+% 1. Too much redundancy if I include all differential equation.
+% 2. No choice to embed differential equations in the \phi function otherwise I defenitly need to put number on arrow. I tried, but its too much confusing
 
 \clearpage
+\small
 \bibliography{Devis}
 \end{document}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
-%%% Extra
-
-%We will assume that all space is occupied by one state, so that the proportions of land cover occupied by all types of patch sum to 1.
-
-%\frac{\delta C}{\delta t} = \alpha_C \cdot (C+M) \cdot (1-\alpha_D \cdot (D+M)) \cdot (1-C-D-M) + S_C \cdot M - \%beta_D \cdot (D+M) \cdot C - e \cdot C%
-%\frac{\delta D}{\delta t} = \alpha_D \cdot (D+M) \cdot (1-\alpha_C \cdot (C+M)) \cdot (1-C-D-M) + S_D \cdot M - %\%beta_C \cdot (C+M) \cdot D - e \cdot D
-%\frac{\delta M}{\delta t} = \alpha_C \cdot (C+M) \cdot \alpha_D \cdot (D+M) \cdot (1-C-D-M) + \beta_C \cdot (C+M) + \beta_D \cdot (D+M) - S_C \cdot M - S_D \cdot M - e \cdot M
-
-% \begin{figure}[!ht]
-% 	\centering
-% 	\begin{minipage}{0.45\linewidth}
-% 		\input{	fig/fig1.tex}
-% 	\end{minipage}
-% 	\begin{minipage}[t]{1\linewidth}
-% \small{\begin{equation}
-% 	 	\frac{\delta T}{\delta t} = e \cdot (C+M+D) -  T \cdot (\phi_D + \phi_C + \phi_M \\
-% \end{equation}
-% \begin{equation}
-% 		\frac{\delta M}{\delta t} = \phi_M\cdot T +  \beta_C \cdot (C+M)\cdot D + \beta_D\cdot (D+M)\cdot C - S_C\cdot M -S_D\cdot M - e\cdot M \\
-% \end{equation}
-% \begin{equation}
-% 		\frac{\delta C}{\delta t} = \phi_C \cdot T + S_C\cdot M - D\cdot (D+M)\cdot C - e \cdot C \\
-% \end{equation}
-% \begin{equation}
-% 		\frac{\delta D}{\delta t} = \phi_D \cdot T + S_D \cdot M - \beta_C \cdot (C+M) \cdot D - e \cdot D
-% \end{equation}}
-% 	\end{minipage}
