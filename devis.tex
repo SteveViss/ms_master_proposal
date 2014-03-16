@@ -67,7 +67,7 @@ change scenarios. In this context, we will test two different hypothesis:
 ($H_1$) Alternative stable states are occuring in the boreal-temperate forests
 ecotone;  ($H_2$) Time lags in the response to climate change will be larger
 in areas where alternative stable states are occuring. In order to achieve my
-general objective and test these hypotheses, I will (1) develop a climate-
+general objective and test these hypotheses, we will (1) develop a climate-
 dependent model of state transition (STM) representing the dynamics of the
 boreal and temperate communities at landscape scale; (2) investigate the
 spatial structure of maple distribution through his temperate community; (3)
@@ -76,11 +76,11 @@ and finally (4) run simulations of the temperate community species
 distribution under different climate change scenarios. The first section of
 this proposal reviews the context of the study. The first part of the review
 presents the concept of alternative stable states and critical transitions in
-forest ecosystem properties. The second part focuses on sugar maple, its
+forest ecosystem properties. The second part focuses on sugar maple, it's
 associated community in the temperate biome and a justification about why
 alternative stable states are expected to occure at the boreal-temperate
 forests ecotone. The last section of this document describes the model and
-the methodology that I will employ to fill my specific objectives. 
+the methodology that we will employ to fill my specific objectives. 
 
 \section{Review} 
 
@@ -219,8 +219,8 @@ alternative stable states
 	\caption{Conceptual representation of the transition model between deciduous ($D$),
 	mixed ($M$) and coniferous ($C$) stands. $T$ corresponds to a post-disturbance forest patch. Perturbations, natural and anthropogenic, occur with a frequence $\epsilon$. Parameters $\theta$ and $\beta$ are rates of colonization and succession,
 	respectively. We define recovery functions $\phi_c$ , $\phi_d$ as $\phi_c
-	= \alpha_c \cdot (M+C) \cdot [1- \alpha_d \cdot (D +M)]$ and $\phi_d =
-	\alpha_d \cdot (D+M) \cdot [1- \alpha_c \cdot (C +M)]$. $\phi_m$ include these both equations giving $\phi_m = \phi_c \cdot \phi_d$. Finally, parameter $\alpha$ represents the climate-dependent recovery rate after a patch has been disturbed.}
+	= \alpha_c \cdot (M+C) \cdot [1- \alpha_d \cdot (D+M)]$ and $\phi_d =
+	\alpha_d \cdot (D+M) \cdot [1- \alpha_c \cdot (C+M)]$. $\phi_m$ include these both equations giving $\phi_m = \phi_c \cdot \phi_d$. Finally, parameter $\alpha$ represents the climate-dependent recovery rate after a patch has been disturbed.}
 	\label{Model}
 	\vspace{-1em}
 \end{wrapfigure}
@@ -313,7 +313,7 @@ measurement). Stands will be considered in one of the four states previously
 described in the model's section (Figure \ref{Model}). C, M and D states are
 classified following their percent of BA in deciduous ($BA_D$) and coniferious
 ($BA_C$) species in the plot (i.e. D state if $BA_C < 25\%$ and $BA_D \geq
-50\%$, C state if $BA_C \geq 50\%$ and $BA_D < 25\%$; and M state if $BA_C >
+50\%$, C state if ${BA}_C \geq 50\%$ and $BA_D < 25\%$; and M state if $BA_C >
 25\%$ and $BA_D \geq 50\%$). Lastly, each plot containing more than 75\% of BA
 mostly representative of post-disturbance community species such as birch,
 aspen or pine is classified into transitional state (T). The second step
@@ -322,8 +322,9 @@ given a specific climate condition ($Climate$, eq. \ref{eq1}) and proportion
 of deciduous or coniferious available ($\hat{D}$ and $\hat{M}$, eq.
 \ref{eq1}). This function will be calibrate in using two statistical methods:
 (1) classification tree and (2) multinomial regression (eq. \ref{eq1}).
-Explanations on this calibration step will focus only on a specific transition
-($M \rightarrow T$). The method used are generalizable on all transitions.
+Explanations on this calibration step will focus only on a specific
+transition, either $M \rightarrow T$ but the method used will be generalized
+on all transitions.
 
 \vspace{-1em}
 \begin{equation}
@@ -331,37 +332,26 @@ Explanations on this calibration step will focus only on a specific transition
 \label{eq1}
 \end{equation}
 
+The Breiman and Cutler's classification method or classification tree
+(randomForest R-package, \cite{Liaw2002a}) allows to compute $\hat{D}$ and
+$\hat{M}$ (eq. \ref{eq1}). They are the expected probability of observing
+state D or M in this area given climatic conditions. In this transition case
+(eq. \ref{eq1}), $\hat{D}$ and $\hat{M}$ is a proxy of the deciduous
+regeneration pressure surrounding the area. To compute the probability of
+state occurency given the local climatic condition encounter by the patch, we
+use a multinomial regression (nnet R-package, \cite{Venables2002}). We can
+summarize this multinomial regression as $P(D_{t1}|M_{t0}) \sim \hat{D} +
+\hat{M} + X_1+X_2+X_i... $ where $\hat{D}$ and $\hat{M}$ correspond to the
+probability of observing any state in the immediate neighbourood (previously
+presented) and $X_i$ a climate variable. Model selection will perform using
+Akaike information criterion (AIC). Model selected will serve to parameterize
+all flows between states. The last part consists to integrate the model in
+Julia programming language (parallelizable with CUDA) and implemented it in a
+spatially explicit cellular automaton.\\
 
-In using plot classification and climate associated, we
-will be able to use the Breiman and Cutler's classification method
-(randomForest R-package, \cite{Liaw2002a}).
+\textbf{Validation.} Model validation will conduct on TP, a independant
+dataset present only in the Québec database.
 
-%DG: and then explain that \hat{D} is the expected probability of observing state D in this area given climatic conditions and it is use to estimate the propagule pression. 
-%DG: you say that this set of equation (one per state) will be used to derive a climate dependent state transition matrix. 
-%
-
-The model will be used to compute the probability of state occurency given the
-local climatic condition encounter by the patch (Or $P_{s}|X_1+X_2+X_i...$
-where $s$ is a state's model and $X_i$, a climat variable). Probability $P_s$
-will be use as a proxy of the patch types (e.g. $C$ or $M$) available in the
-neighborhood and present in the colonization's equation (e.g. $\beta_c \cdot
-(C+M)$). The final step is to conduct a multinomial regression (nnet
-R-package, \cite{Venables2002}) in order to get the transitional probability
-between each model's state. We can summarize this multinomial regression as
-follow: $P_{d}|P_{m} \sim (D+M) + X_1+X_2+X_i... $ where $(D+M)$ correspond to
-the availability of patch types $C$ and $M$ in the neighborhood (previously
-presented).\\
-
-
-%DG: This is the most important part, and the least developped. 
-%DG: Mention the model will be implemented on C++ or CUDA
-% DG: you will use the parameterized model and consider that \hat{D} is the probability of observing any state in the immediate neighbourood.
-%DG: At the end, I would formulate questions, then explain briefly the simulation scenarios to answer each of them.
-% DG: these should be directly related to your hypotheses. 
-
-\textbf{Validation.} 
-
-% - you will use the TSP to validate the model (which means Quebec only)
 % - you categorize each plot into the different state
 % - you will compute the proportion of each state in ecoregions (a climatic division of the territory made by the MRNF)
 % - then you solve the model at equilibrium for each ecoregion
@@ -369,8 +359,7 @@ presented).\\
 % - a good model will have a high R2 and no bias (slope = 1, intercept = 0)
 % - a bias might be indicative of a change that is already taking place (the current forest composition is not at equilibrium). 
 
-\textbf{Simulation.} This model will be implemented as a spatially explicit
-cellular automaton in order to evaluate the velocity of the
+\textbf{Simulation.} This model will be  in order to evaluate the velocity of the
 migration of deciduous forest under differents climate change scenario.
 Simulation will be run in order to study states equilibrium of this model and
 allows to investigate some relevant points : (i) the sensitivity of
@@ -379,6 +368,8 @@ landscape is spatially structured (e.g. mosaic structure) around alernatives
 stables states; (iii) impact of climatic conditions on transition rates
 between states (e.g. in increasing sharply temperature in the lattice). \\
 
+%DG: At the end, I would formulate questions, then explain briefly the simulation scenarios to answer each of them.
+% DG: these should be directly related to your hypotheses. 
 
 %%%% Model section
 %MT: To what end? What is the purpose of this step?. In order to be include in C++
