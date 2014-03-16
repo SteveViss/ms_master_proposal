@@ -25,7 +25,8 @@ maple regeneration depends both on macro conditions (\textit{i.e.} regional
 climate) and micro conditions (\textit{i.e.} soil and microtopography)
 \cite{Graignic2013,Lafleur2010}. Thus, the expansion of Sugar maple and his
 temperate species community is difficult to predict because micro conditions
-can mitigate macro conditions such as global warming \cite{DeFrenne2013}.
+can mitigate macro conditions such as global warming \cite{DeFrenne2013}.\\
+
 Species are responding differently to the soil conditions, and the soil
 properties found in boreal forests are different from those in temperate
 forest \cite{Lafleur2010,Barras1998,Goldblum2010,Demers1998}. Conifer forests
@@ -270,63 +271,71 @@ similar and can be described (with coniferious state as example):
 $\frac{\delta C}{\delta t} = \phi_c \cdot T + \theta_c \cdot M - \alpha_d
 \cdot (D+M)\cdot C - \epsilon \cdot C$. The entire model is spatially implicit
 and assume that each patch is occupied by one state, thus the proportion of
-all states sum to 1 in the entire matrix landscape. The model will be solved
-at equilibrium to understand if alternative stable states are possible and
-under which conditions. \\
+all states sum to 1 in the entire matrix landscape. \\
 
-\textbf{Data description.} The parameterization and
-validation of the model will be conducted using the QUICC-
-FOR\footnote{Quantifying and mapping impact of climate change on the forest
-productivity in eastern Canada.} database containing large permanent (PP) and
-temporary (PT) sample plots from United States and Canada. Data are freely
-provided by partners. They and covering 3 eastern Canadian provinces
-(\textit{ca.} 16,000 plots) and 31 states of eastern USA (\textit{ca.} 50,000
-plots). Surveys started in the 1970s and includ up to 5 remeasurements, with
-the interval between sampling ranging from 5 to 10 years. Data is recorded for
-seedlings, trees, saplings and stand level. Stem-level information including
-diameter at breast height (DBH), species, state of the stem (e. g. alive or
-dead), height, age and canopy position. Seedling and sapling data provide
-numbers of individuals by class of DBH and species. The stand-level data
-include many relevant informations about soil deposit, drainage, disturbances,
-cover type and, age and height of the stand. All plot inventories are geo-
-referenced. For each plot location, some climatic variables are include and
-extract by interpolation from the climatic model ANUSPLIN \cite{McKenney2011}.
-We will parameterize the model using annual rainfall (mm) and monthly
-temperatures (minimum, maximum and average in \ensuremath{^\circ}C) of the
-previous 30 years the year of the plot sampling. Those variables are used by
-many authors as external conditions to detect alternative stable states and
-are often indicative of the distribution of biomes investigated in this
-present study \cite{Goldblum2010,Hirota2011,Scheffer2012}. Filters will be
-applied to the database prior to the model parameterization. In a first time,
-out of the 57 species contained in the  database, only 28 representative
-species of the whole sample plots network will be taken into account. Only
-plots with mesic soil conditions, \textit{i.e.} thick deposite with fast to
-moderate drainage will be considered for the analysis. We will consider only
-the mature stands with dominant stratum within trees is superior to 50 years
-old. Lastly, plots disturbed by human activities (mostly by logging) will be
-removed in order to focus on natural disturbances. \\
+\textbf{Data description.} The parameterization and validation of the model
+will be conducted using the QUICC- FOR\footnote{Quantifying and mapping impact
+of climate change on the forest productivity in eastern Canada.} database
+containing large permanent (PP) and temporary (TP) sample plots from United
+States and Canada. Data are freely provided by partners. They are covering 3
+eastern Canadian provinces (\textit{ca.} 16,000 plots) and 31 states of
+eastern USA (\textit{ca.} 50,000 plots). Surveys started in the 1970s and
+include up to 5 remeasurements, with the interval between sampling ranging
+from 5 to 10 years. Data is recorded for seedlings, trees, saplings and stand
+level. Stem-level information including diameter at breast height (DBH),
+species, state of the stem (e. g. alive or dead), height, age and canopy
+position. Seedling and sapling data provide numbers of individuals by class of
+DBH and species. The stand-level data include many relevant informations about
+soil deposit, drainage, disturbances, cover type and, age and height of the
+stand. All plot inventories are geo-referenced. For each plot location, some
+climatic variables are include and extract by interpolation from the climatic
+model ANUSPLIN \cite{McKenney2011}. We will parameterize the model using
+annual rainfall (mm) and monthly temperatures (minimum, maximum and average in
+\ensuremath{^\circ}C) of the previous 30 years the year of the plot sampling.
+Those variables are used by many authors as external conditions to detect
+alternative stable states and are often indicative of the distribution of
+biomes investigated in this present study
+\cite{Goldblum2010,Hirota2011,Scheffer2012}. Filters will be applied to the
+database prior to the model parameterization. In a first time, out of the 57
+species contained in the  database, only 28 representative species of the
+whole sample plots network will be taken into account. Only plots with mesic
+soil conditions, \textit{i.e.} thick deposite with fast to moderate drainage
+will be considered for the analysis. We will consider only the mature stands
+with dominant stratum within trees is superior to 50 years old. Lastly, plots
+disturbed by human activities (mostly by logging) will be removed in order to
+focus on natural disturbances. \\
 
 \textbf{Paramerization.} As previously stated, the model focuses mostly on
 representative species of the boreal and temperate forest. In this context,
 the basal area ($m^2/ha$, BA) will be compute to provide a measure of relative
 species abundance in each of the plot and at each time step (year of
-measurement). Stands will be considered in one of the four states  previously
-described in the model's section (C, D, M or T - Figure \ref{Model}).
+measurement). Stands will be considered in one of the four states previously
+described in the model's section (Figure \ref{Model}). C, M and D states are
+classified following their percent of BA in deciduous ($BA_D$) and coniferious
+($BA_C$) species in the plot (i.e. D state if $BA_C < 25\%$ and $BA_D \geq
+50\%$, C state if $BA_C \geq 50\%$ and $BA_D < 25\%$; and M state if $BA_C >
+25\%$ and $BA_D \geq 50\%$). Lastly, each plot containing more than 75\% of BA
+mostly representative of post-disturbance community species such as birch,
+aspen or pine is classified into transitional state (T). The second step
+consists to compute a probability function of transition between two states
+given a specific climate condition ($Climate$, eq. \ref{eq1}) and proportion
+of deciduous or coniferious available ($\hat{D}$ and $\hat{M}$, eq.
+\ref{eq1}). This function will be calibrate in using two statistical methods:
+(1) classification tree and (2) multinomial regression (eq. \ref{eq1}).
+Explanations on this calibration step will focus only on a specific transition
+($M \rightarrow T$). The method used are generalizable on all transitions.
 
-% DG: I think here it is critical to provide the boundary conditions to define the states
+\vspace{-1em}
+\begin{equation}
+	P(D_{t1}|M_{t0}, Climate) = f(\overbrace{Climate, \underbrace{\hat{D}, \hat{M}}_\text{1. Classification tree}}^\text{2. Multinomial regression})
+\label{eq1}
+\end{equation}
 
-Coniferious stands are dominated by either spruce, larch, grey pine, cedar,
-balsam fir and hemlock species. Deciduous stands are dominated by ash, maples,
-iron wood, beech and tilia. Finally, post-disturbance stands are dominated by
-birch, red oak, aspen, white and red pine, balsam poplar and mountain ash.
-Each plot will be classified into the four different states model following
-their percent of deciduous and coniferious or transitional species cover. In
-using the plots previously classified and their climatic variables associated,
-we will be able to use the Breiman and Cutler's classification method
+
+In using plot classification and climate associated, we
+will be able to use the Breiman and Cutler's classification method
 (randomForest R-package, \cite{Liaw2002a}).
 
-%DG: I think you have to start to lay out the different statistical models you want to parameterize:
-% For instance, P(D_{t1}|M_{t0}, Climate) = f(Climate, \hat{D}, \hat{M})
 %DG: and then explain that \hat{D} is the expected probability of observing state D in this area given climatic conditions and it is use to estimate the propagule pression. 
 %DG: you say that this set of equation (one per state) will be used to derive a climate dependent state transition matrix. 
 %
@@ -336,11 +345,11 @@ local climatic condition encounter by the patch (Or $P_{s}|X_1+X_2+X_i...$
 where $s$ is a state's model and $X_i$, a climat variable). Probability $P_s$
 will be use as a proxy of the patch types (e.g. $C$ or $M$) available in the
 neighborhood and present in the colonization's equation (e.g. $\beta_c \cdot
-(C+M)$). The final step is to conduct a multinomial regression (a generalized
-linear model) in order to get the transitional probability between each
-model's state. We can summarize this multinomial regression as follow:
-$P_{d}|P_{m} \sim (D+M) + X_1+X_2+X_i... $ where $(D+M)$ correspond to the
-availability of patch types $C$ and $M$ in the neighborhood (previously
+(C+M)$). The final step is to conduct a multinomial regression (nnet
+R-package, \cite{Venables2002}) in order to get the transitional probability
+between each model's state. We can summarize this multinomial regression as
+follow: $P_{d}|P_{m} \sim (D+M) + X_1+X_2+X_i... $ where $(D+M)$ correspond to
+the availability of patch types $C$ and $M$ in the neighborhood (previously
 presented).\\
 
 

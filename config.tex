@@ -58,6 +58,9 @@
 \DeclareTextFontCommand{\helvetica}{\fontfamily{phv}\selectfont\small}
 \titlespacing\section{0pt}{12pt plus 4pt minus 2pt}{0pt plus 2pt minus 2pt}
 
+\usepackage{calc}
+\newcommand{\explain}[2]{\underbrace{#1}_{\parbox{\widthof{#1}}{\footnotesize\raggedright #2}}}
+
 \begin{document}
 
 \clearpage\thispagestyle{empty}
