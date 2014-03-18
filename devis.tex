@@ -345,7 +345,15 @@ on all transitions.
 \label{eq1}
 \end{equation}
 
-% Isabelle comment !
+% Isabelle comment : La partie où tu parles des arbres de classification, c'est
+% pas clair. Tu peux te contenter de dire que tu fais un SDM (ou une
+% regréssion) pour modéliser la proportion de D, M dans le voisinage en
+% fonction du climat du plot. Pas besoin de préciser que tu vas utiliser un
+% randomForest c'est vraiment un détail mineur et c'est s'aventurer en terrain
+% glissant vu que tu n'es pas encore un expert des random forest. D'ailleurs,
+% random forest ce n'est pas un arbre de classification, mais une forêt
+% aléatoire d'arbres de classification, c'est différent. C'est juste une
+% technique basée sur les arbres de classification mais qui va bien au-delà.
 
 The Breiman and Cutler's classification method or classification tree
 (randomForest R-package, \cite{Liaw2002a}) allows computation of $\hat{D}$ and
@@ -358,12 +366,16 @@ use a multinomial regression (nnet R-package, \cite{Venables2002}). We can
 summarize this multinomial regression as $P(D_{t1}|M_{t0}) \sim \hat{D} +
 \hat{M} + X_1+X_2+X_i... $ where $\hat{D}$ and $\hat{M}$ correspond to the
 probability of observing any state in the immediate neighbourhood (previously
-presented) and $X_i$ a climate variable. Model selection will be performed using
-Akaike's information criterion (AIC). Model selected will serve to parameterize
-all flows between states in order to determine a transition matrix that will
-be a function of the external conditions (i.e. neighbourhood and climate). 
-The last part consists of implementing the model as a spatially explicit cellular
-automaton. 
+presented) and $X_i$ a climate variable. Model selection will be performed
+using Akaike's information criterion (AIC). Model selected will serve to
+parameterize all flows between states in order to determine a transition
+matrix that will be a function of the external conditions (i.e. neighbourhood
+and climate). The last part consists of implementing the model as a spatially
+explicit cellular automaton in Julia programming language.
+
+% STEVE (Partial answer):
+% 1 -
+
 
 % WHY
 % you need to talk about WHY you will be doing this. as for how...
