@@ -220,7 +220,7 @@ drivers in shifts between alternative stable states
 % and do not describe the model in the caption (unless it is necessary to understand the 
 % figure)
 %
-% STEVE: DOM let me know if that's still unclear, because I modified it !
+% STEVE: DOM let me know if that's still unclear, I modified it !
 
 
 \textbf{State and Transitional Model.} The framework of this study lies is a
@@ -243,7 +243,7 @@ neighbourhood. For instance, the succession rate of a coniferous patch
 ($\beta_c$) towards a mixed patch (M) depends also on the availability of D
 and M patches in the landscape (figure \ref{Model}).  Natural processes such
 succession and colonization  are not the only drivers leading the transition
-between two patches. Indeed, some disturbances might change state proportion
+between two states. In fact, some disturbances might change state proportion
 in the landscape. Natural disturbances are an important driver of forest
 dynamics at landscape scale (e.g. fire in boreal forest or large windthrow in
 temperate forest). For instance, small fires induce deciduous dominance and
@@ -342,8 +342,8 @@ aspen or pine is classified into transitional state (T).
 % actually not anything. Same with 49% C and 51% D, etc. This seems crazy! What about 25% 
 % D and 25% C? It is impossible for this stand to be T under the current rules, so what 
 % is it? Nothing?
-%
-%
+
+
 The second step
 consists of computing a probability function of transition between two states
 given a specific climate condition ($Climate$, eq. \ref{eq1}) and proportion
@@ -376,7 +376,9 @@ Akaike's information criterion (AIC). Model selected will serve to parameterize
 all flows between states in order to determine a transition matrix that will
 be a function of the external conditions (i.e. neighbourhood and climate). 
 The last part consists of implementing the model as a spatially explicit cellular
-automaton. % WHY
+automaton. 
+
+% WHY
 % you need to talk about WHY you will be doing this. as for how...
 % I think in general comments about implementation are not necessary at this phase, since
 % the details will change as the project evolves and since most people readers don't care. 
