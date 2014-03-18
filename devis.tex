@@ -311,43 +311,29 @@ with dominant strata containing trees greater than 50 years old. Lastly, plots
 disturbed by human activities (mostly by logging) will be removed in order to
 parametrize the model using only natural disturbances. \\
 
+% STEVE: Relevant (see sentences following) ?
+% Following this
+% fact, coniferious stands are including spruce, larch, grey pine, cedar, balsam fir
+% and hemlock species. Deciduous stands are containing essentially ash, maples, iron
+% wood, beech and tilia. Finally, post-disturbance stands are taking in account birch,
+% red oak, aspen, white and red pine, balsam poplar and mountain ash.
+
 \textbf{Parametrization.} As previously stated, the model focuses mostly on
-representative species of the boreal and temperate forest. In this context,
-the basal area ($m^2/ha$, BA) will be computed to provide a measure of relative
-species abundance in each of the plots and at each time step (year of
-measurement). Stands will be considered in one of the four states previously
-described in the model's section (Figure \ref{Model}). C, M and D states will be
-classified following their percentage of BA in deciduous ($BA_D$) and coniferous
-($BA_C$) species in the plot (i.e. D state if $BA_C < 25\%$ and $BA_D \geq
-50\%$, C state if ${BA}_C \geq 50\%$ and $BA_D < 25\%$; and M state if $BA_C >
-25\%$ and $BA_D \geq 50\%$). Lastly, each plot containing more than 75\% of BA
-mostly representative of post-disturbance community species such as birch,
-aspen or pine is classified into transitional state (T). 
-%
-% The above classification is quite confusing, as the options are not mutually exclusive.
-% Are *all* possible species classified as either D, C, or T? I guess so, but it is not
-% said explicitly
-%
-%                   D
-%           <25 | 25-50 | >=50
-%          --------------------
-%      <25|  T? |       |  D        note -- the first box is T only if C+D < 25
-% C  25-50|     |       |  M
-%     >=50|  C  |       |  X
-%
-% boxes with C are coniferous, D are deciduous, M are mixed, and X are not possible
-% the blank boxes are not covered by your classification. In particular, why is a mixed
-% < 25 % coniferous but more than 50% deciduous? why is it asymmetric? The way you have
-% it defined, a stand that is 49% deciduous and 49% coniferous is not mixed, and is
-% actually not anything. Same with 49% C and 51% D, etc. This seems crazy! What about 25% 
-% D and 25% C? It is impossible for this stand to be T under the current rules, so what 
-% is it? Nothing?
-
-
-The second step
-consists of computing a probability function of transition between two states
-given a specific climate condition ($Climate$, eq. \ref{eq1}) and proportion
-of deciduous or coniferous available ($\hat{D}$ and $\hat{M}$, eq.
+representative species of the boreal and temperate forest. The basal area
+($m^2/ha$, BA) will be computed to provide a measure of relative species
+abundance in each of the plots and at each time step (year of measurement).
+Stands will be considered in one of the four states previously described in
+the model's section (Figure \ref{Model}). C, M and D states will be classified
+following their percentage of BA in deciduous ($BA_D$) and coniferous ($BA_C$)
+species in the plot (i.e. D state if $BA_C < 25\%$ and $BA_D \geq 50\%$, C
+state if ${BA}_C \geq 50\%$ and $BA_D < 25\%$; and M state if $BA_C > 25\%$
+and $BA_D > 25\%$). Lastly, each plot containing more than 75\% of BA mostly
+representative of post-disturbance community species such as birch, aspen or
+pine is classified into transitional state (T). The rest of the plots are
+unclassified if they haven't satisfied the previous statements. The second
+step consists of computing a probability function of transition between two
+states given a specific climate condition ($Climate$, eq. \ref{eq1}) and
+proportion of deciduous or coniferous available ($\hat{D}$ and $\hat{M}$, eq.
 \ref{eq1}). This function will be calibrated using two statistical methods:
 (1) classification tree and (2) multinomial regression (eq. \ref{eq1}).
 Explanations on this calibration step will focus only on a specific
@@ -358,7 +344,8 @@ on all transitions.
 	P(D_{t1}|M_{t0}, Climate) = f(\overbrace{Climate, \underbrace{\hat{D}, \hat{M}}_\text{1. RandomForest}}^\text{2. Multinomial regression})
 \label{eq1}
 \end{equation}
-% D-hat and M-hat are themselves functions of climate, yes? Yes
+
+% Isabelle comment !
 
 The Breiman and Cutler's classification method or classification tree
 (randomForest R-package, \cite{Liaw2002a}) allows computation of $\hat{D}$ and
