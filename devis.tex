@@ -109,17 +109,27 @@ methodology that we will employ to achieve the specific objectives.
 
 \textbf{Alternative stable states in forest ecosystems.} The idea that
 alternative stable states may exist in community ecology was proposed in the
-late 1960s \cite{Scheffer2001,Society2014a}. May (1977) \cite{May1977}
+late 1960s \cite{Scheffer2001,Society2014a}.  May (1977) \cite{May1977}
 highlighted the fact than an ecosystem can be seen as a dynamic system where
 communities are not constant accross the time and possess several different
-equilibrium points or stable states given a specific environnement.
+equilibrium points or stable states given a specific environnement.  Suppose
+that the state of a community can be characterized by a set of dynamic state
+variables, with their relations to each other defined by a set of parameters
+in a model.
 
+%DG: attention aussi lors de la rédaction, tu as tendance à avoir des
+%artifices de langages qui sont inutiles. Simplifie ton texte au max. Par
+%exemple, dans la phrase précédente, à quoi sert le 'usefully', 'dynamic', 'a
+%set of'? Tu peux retirer ces mots sans changer le sens de la phrase, en fait
+%même ça va l'alléger. J'ai fait plusieurs petites corrections ici et là, tu
+%devras apprendre à simplifier ton texte. Ici ce n'est plus une question de
+%traduction anglais/français, c'est vraiment d'écrire le plus efficacement
+%possible, sans artifices.
+
+% Définir un état pour poser les assises. 
 
 % DG: cette phrase n'est pas claire. Qu'est-ce que tu veux dire par un système
-% dynamique? Ensuite, pourquoi tu réfères deux fois à May dans la même phrase?
-
-%DG: attention à la rédaction redondante. La phrase précédente ne fait que
-%répéter ce qui est au dessus.
+% dynamique? Ensuite, pourquoi tu réfères deux fois à May dans la mêm e phrase?
 
 %DG: attention aussi lors de la rédaction, tu as tendance à avoir des
 %artifices de langages qui sont inutiles. Simplifie ton texte au max. Par
@@ -135,15 +145,11 @@ equilibrium points or stable states given a specific environnement.
 
 There are three possible responses of ecosystems to changing environmental
 conditions: \textbf{(A)} gradual, \textbf{(B)} basic fold, \textbf{(C})
-catastrophic fold  \cite{Scheffer2001} (Figure \ref{fig1}, upper line).
-
-%DG: cette phrase par exemple serait plus claire si retournée: There are three
-%possible responses of ecosystems to changing environmental conditions
-
-First, when a small modification environmental occurs, the state of the forest ecosystem can
-change almost linearly (Figure \ref{fig1}.a, upper line)
-\cite{Scheffer2001,Scheffer2009}. In this case, ecosystems can be seen
-as a continuum of states along the climate gradient
+catastrophic fold  \cite{Scheffer2001} (Figure \ref{fig1}, upper line). First,
+when a small modification environmental occurs, the state of the forest
+ecosystem can change almost linearly (Figure \ref{fig1}.a, upper line)
+\cite{Scheffer2001,Scheffer2009}. In this case, ecosystems can be seen as a
+continuum of states along the climate gradient
 \cite{Scheffer2001,Scheffer2009,scheffer2009critical}.
 
 %DG: c'est quoi cette histoire de précipitations et de transition décidue/tempéré?
@@ -185,7 +191,7 @@ in the the boreal-temperate forests studied \cite{Barras1998,Society2014}. \\
 \textbf{Natural system studied.} Many empirical and modelling studies have been
 conducted on the transition between forest to non-forests communities (e.g. Boreal-Tundra) 
 \cite{Scheffer2012,Scheffer2001,Hirota2011,Messaoud2007}. Little
-attention has been given to understand forest-forest ecotones
+attention has been given to understand forest-forest ecoton es
 \cite{Goldblum2010,Graignic2013,Messaoud2007}. 
 
 %DG: attention aussi aux accords, pluriel etc.... Par exemple, dans la phrase
@@ -409,36 +415,34 @@ unclassified if they haven't satisfied the previous statements. The second
 step consists of computing a probability function of transition between two
 states given a specific climate condition ($Climate$, eq. \ref{eq1}) and
 proportion of deciduous or coniferous available ($\hat{D}$ and $\hat{M}$, eq.
-\ref{eq1}). This function will be calibrated using two statistical methods:
-(1) classification tree and (2) multinomial regression (eq. \ref{eq1}).
-Explanations on this calibration step will focus only on a specific
-transition, either $M \rightarrow T$ but the method used will be generalized
-on all transitions.
+\ref{eq1}).  Hereafter, will focus only on a specific transition $M
+\rightarrow T$ but the method used will be generalized on all transitions.  In
+this example (eq. \ref{eq1}),  $\hat{D}$ and $\hat{M}$ are the expected
+probability of observing state D or M in this area given climatic conditions.
+They are proxy for the deciduous regeneration pressure surrounding the area.
+They will be estimated using  a classification method (Step 1, eq. \ref{eq1})
+as for instance random forest (R-package, \cite{Liaw2002a}).
+
+
+%Hence, this function will be calibrated using two statistical methods:
+%(1) classification tree and (2) multinomial regression (eq. \ref{eq1}).
 
 \begin{equation}
-	P(D_{t1}|M_{t0}, Climate) = f(\overbrace{Climate, \underbrace{\hat{D}, \hat{M}}_\text{1. RandomForest}}^\text{2. Multinomial regression})
+	P(D_{t1}|M_{t0}, Climate) = f(\overbrace{Climate, \underbrace{\hat{D}, \hat{M}}_\text{Step 1. RandomForest}}^\text{ Step 2. Multinomial regression})
 \label{eq1}
 \end{equation}
 
-% Isabelle comment !
 
-The Breiman and Cutler's classification method or classification tree
-(randomForest R-package, \cite{Liaw2002a}) allows computation of $\hat{D}$ and
-$\hat{M}$ (eq. \ref{eq1}). They are the expected probability of observing
-state D or M in this area given climatic conditions. In this transition case
-(eq. \ref{eq1}), $\hat{D}$ and $\hat{M}$ is a proxy for the deciduous
-regeneration pressure surrounding the area. To compute the probability of
-state occurrence given the local climatic conditions encounter by a patch, we
-use a multinomial regression (nnet R-package, \cite{Venables2002}). We can
-summarize this multinomial regression as $P(D_{t1}|M_{t0}) \sim \hat{D} +
-\hat{M} + X_1+X_2+X_i... $ where $\hat{D}$ and $\hat{M}$ correspond to the
-probability of observing any state in the immediate neighbourhood (previously
-presented) and $X_i$ a climate variable. Model selection will be performed using
-Akaike's information criterion (AIC). Model selected will serve to parameterize
-all flows between states in order to determine a transition matrix that will
-be a function of the external conditions (i.e. neighbourhood and climate). 
-The last part consists of implementing the model as a spatially explicit cellular
-automaton. \\
+To compute the probability of state occurrence given the local climatic
+conditions encounter by a patch (Step 2, eq. \ref{eq1}), we use a multinomial
+regression (nnet R-package, \cite{Venables2002}). We can summarize this
+multinomial regression as $P(D_{t1}|M_{t0}) \sim \hat{D} + \hat{M} +
+X_1+X_2+X_i... $ where $\hat{D}$ and $\hat{M}$ correspond to the probability
+of observing any state in the immediate neighbourhood (previously presented)
+and $X_i$ a climate variable. Model selection will be performed using Akaike's
+information criterion (AIC). Model selected will serve to parameterize all
+flows between states in order to determine a transition matrix that will be a
+function of the external conditions (i.e. neighbourhood and climate).   \\
 
 % WHY
 % you need to talk about WHY you will be doing this. as for how...
@@ -450,7 +454,11 @@ automaton. \\
 % as for Julia... it's an interesting choice :)
 
 
-\textbf{Validation and simulation.} We will use the temporary plots (TP), an
+\textbf{Model simulations.} 
+
+%%% 1er hypothesis 
+
+We will use the temporary plots (TP), an
 independent  dataset present only in the Québec database, for model
 validation. Temporary plots will be classified into the same four states. We
 will compute the proportion of each state by ecoregion ("\textit{Système de
@@ -460,11 +468,18 @@ them with observed data from TP database. Highest R-squared and lowest Akaike
 information criterion (AIC) will be associated with the best predictive and
 parsimonious model. Bias (i.e low R-squared) might indicate that the current
 forest composition is not at equilibrium and needing further investigations.
+
+
 After the validation process, we will study equilibrium states of the model
 and investigate the first hypothesis by (i) evaluate the model sensitivity on
 initials conditions (e.g state occurrences), (ii) analyze the spatial
 structure of the landscape (e.g. mosaic) for presence of alternatives stables
-states. Lastly, we will run simulations with increases or modification of the
+states. 
+
+%The last part consists of implementing the model as a spatially explicit cellular
+%automaton.
+
+Lastly, we will run simulations with increases or modification of the
 climatic gradient in the cellular automaton. This step, in the context of the
 second hypothesis, allows us to assess Sugar maple migration (e.g velocity and
 time lag) through  temperate communities under different climate change
