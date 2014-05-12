@@ -123,8 +123,8 @@ certain range, but respond strongly when a threshold is reached
 \cite{scheffer2009critical}. For instance, some species mortality can increased
 sharply when a toxin is added to the environment and a lethal treshold is
 reached \cite{scheffer2009critical}. In this case, the response curve of this
-natural systeme is not linear but lightly folded. Hence, a small change of the
-environment such adding a toxin, can lead to major changes in the  community
+natural system is not linear but lightly folded. Hence, a small change of the
+environment such as adding a toxin, can lead to major changes in the  community
 state. Lastly, in some strong non-linear systems, the response can be folded
 backwards and alternative stable states could occur (Figure \ref{fig1} .C). This
 implies that, for a given environnement, the ecosystem has two alternative
@@ -155,7 +155,7 @@ canadensis} seedling establishement for instance is impacted by the unique
 seedbed conditions created by each species, promoting self-replacement
 \cite{Society2014,McCarthyNeumann2012}. By changing seebed conditions, mature
 trees promote their own regeneration,. When the intraspecific facilitation is
-higher than the interspecific competition, we can observed forest stand
+higher than the interspecific competition, we can observe forest stand
 dominated by mature trees of \textit{Acer saccharum} and else by \textit{Tsuga
 canadensis}. Hence, either forest stand type can be considered as an
 alternative stable state. This kind of positive feedback is susceptible to
@@ -237,7 +237,7 @@ between a deciduous and coniferous stand, which requires an intermediate step
 through state M. Except for the colonization probability ($\theta$),
 transition probabilities vary with the proportion of coniferous or deciduous
 found in the  neighbourhood to represent dispersal limitations. For instance,
-the succession rate of a coniferous patch ($\beta_c$) towards a mixed patch
+the succession rate of a coniferous patch ($\beta_d$) towards a mixed patch
 (M) depends also on the availability of D and M patches in the landscape
 (figure \ref{Model}).  \\
 
@@ -266,16 +266,21 @@ as logging can also produce major change in the forest composition. Dupuis
 \textit{et al.} (2011) revealed that historical disturbances affected the
 expansion (maples/aspen) or decline (cedar/spruce) of several species at the
 northern range limit of temperate trees in eastern Québec \cite{Dupuis2011}.
-When a disturbance occurs in the actual model, the state affected is
-systematically converted into a transitional state \textbf{(T)}. (Figure
-\ref{Model}).  Then after, any transitional patch (\textbf{T}) can switch into
-state C, M or D according to a probability $\phi$. In the conversion case of
-state T towards C, this function of probability $\phi_c$ incorporates a
-specific patch regeneration rate ($\alpha_c$), as well as the availability of
-coniferous $(C + M)$ species and the proportion of patches unconverted into a
-deciduous state, $1- \alpha_d \cdot (D + M)$ (see caption, figure
-\ref{Model}). If this patch $C$ is undisturbed, then it could switch to a
-mixed stand after colonization by deciduous trees with a probability
+Hence, natural and anthropogenic disturbances can impact the probability to
+observe a patch dominated by coniferous or deciduous. A forest stand disturbed
+cannot transfer immediately to a patch C, D or M because it will first contain
+early successionnal species such as aspen or birch and after later
+successionnal species most representative of the composition of mixed,
+coniferous and deciduous mature forest stand. Thus, when a disturbance occurs
+in the actual model, the state affected is systematically converted into a
+transitional state \textbf{(T)} (Figure \ref{Model}).  The patch disturbed can
+switch into state C, M or D according to her resilience time $\phi$. In the
+conversion case of state T towards C, this function of probability $\phi_c$
+incorporates a specific patch regeneration rate ($\alpha_c$), as well as the
+availability of coniferous $(C + M)$ species and the proportion of patches
+unconverted into a deciduous state, $1- \alpha_d \cdot (D + M)$ (see caption,
+figure \ref{Model}). If this patch $C$ is undisturbed, then it could switch to
+a mixed stand after colonization by deciduous trees with a probability
 $\theta_c$. The dynamics of a large number of patches following these rules
 can be described with a system of four differential equations. The dynamics of
 $T$ over the time is described by the following differential equation:
@@ -316,26 +321,29 @@ interpolating  the climatic model ANUSPLIN \cite{McKenney2011} . We will
 parameterize the model using annual rainfall (mm) and monthly temperatures
 (minimum, maximum and average in \ensuremath{^\circ}C) of the 30 years
 previous to the year of each plot's sampling. Those variables are used by many
-authors as good predictors of the distribution of the species investigated in
-this present study \cite{Goldblum2010}. Filters will be applied to the
-database prior to the model parameterization. As a first step, out of the 57
-species contained in the database, only 28 representative species of the whole
-dataset will be taken into account. Only plots with mesic soil conditions,
-\textit{i.e.}, thick deposits with fast to moderate drainage, will be
-considered for the analysis. We will consider only mature stands with dominant
-strata containing trees greater than 50 years old. Lastly, plots disturbed by
-human activities (mostly by logging) will be removed in order to parametrize
-the model using only natural disturbances. \\
+authors as good predictors of the continental distribution of the species
+investigated in this present study \cite{Goldblum2010}. Filters will be
+applied to the database prior to the model parameterization. As a first step,
+out of the 57 species contained in the database, only 28 representative
+species of the whole dataset will be taken into account.In order to focus on
+drainage conditions mostly favorable to temperate species such as  Sugar
+maple, only plots with mesic soil conditions, \textit{i.e.}, thick deposits
+with fast to moderate drainage, will be considered for the analysis. Lastly,
+we will consider only mature stands with dominant strata containing trees
+greater than 50 years old. \\
 
 \textbf{Parametrization.} The model focuses on representative species of the
 boreal and temperate forest. Relative  abundance of each species will be
-computed from basal area in each of the plots and at each time step (year of
+computed from basal area ($Ba$) in each of the plots and at each time step (year of
 measurement). Stands will be considered in one of the four states previously
 described in the model section (Figure \ref{Model}). C, M, D and T states will
-be classified following their percentage of $Ba$ in deciduous ($Ba_d$),
-coniferous ($Ba_c$) or transition species ($Ba_t$) in the plot (Table
-\ref{bound}). The plots that do not satisfy any of the conditions shown in
-table \ref{bound} will be filtered out.\\
+be classified following their percentage of basal area in deciduous
+(e.g Beech, Sugar maple etc..), coniferous (e.g Black spruce,
+Balsam fir etc) or transition species in the plot (Table
+\ref{bound}). Transitionnal species correspond to early successional species
+commonly encouter after a disturbance in boreal or temperate patches i.e
+aspen, birch etc... The plots that do not satisfy any of the conditions shown
+in table \ref{bound} will be filtered out.\\
 
 \begin{table}[h]
 \vspace{-1em}
@@ -361,7 +369,7 @@ The second step of the parameterization consists of evaluating functions
 describing the probability of a transition between two states given specific
 climatic conditions ($Climate$, eq. \ref{eq1}) and the proportion of deciduous
 or coniferous in the neighborhood ($\hat{D}$ and $\hat{M}$, eq. \ref{eq1}).
-Hereafter, will focus only on a specific transition $M \rightarrow T$ but the
+Hereafter, I will focus only on a specific transition $M \rightarrow T$ but the
 method is common to  all transitions. In this example (eq. \ref{eq1}),
 $\hat{D}$ and $\hat{M}$ are the expected probabilities of observing state D or
 M in this area given climatic conditions. They are proxy for the deciduous
@@ -376,7 +384,7 @@ forest algorithm (R-package, \cite{Liaw2002a}).
 \end{equation}
 
 The probability of a transition between two states given the local climatic
-conditions encounter by a patch (Step 2, eq. \ref{eq1}) will be computed using
+conditions encountered by a patch (Step 2, eq. \ref{eq1}) will be computed using
 a multinomial regression (nnet R-package, \cite{Venables2002}). We can
 summarize this multinomial regression as $P(D_{t1}|M_{t0},Climate) = \beta_0 +
 \beta_{\hat{D}} \cdot \hat{D} + \beta_{\hat{M}} \cdot \hat{M} + \beta_{X_i}
